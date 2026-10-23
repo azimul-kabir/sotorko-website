@@ -95,9 +95,12 @@ p { margin: 0 0 1em; }
 .paper { width: min(300px, 100%); margin-inline: auto; background: #fff; border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 14px 34px rgba(0, 0, 0, .16); overflow: hidden; }
 .paper img { display: block; width: 100%; height: auto; }
 .gallery-item { align-self: start; }
+/* every picture sits in a box as tall as a phone frame, so the captions line up even under the shorter paper sheet */
+.stage { width: min(300px, 100%); margin: 0 auto -18px; aspect-ratio: 720 / 1443; }
+.stage .shot, .stage .paper { width: 100%; }
 .gallery { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .5rem .2rem 1rem; margin-top: 1.5rem; scrollbar-width: thin; }
 .gallery-item { flex: 0 0 min(72%, 300px); scroll-snap-align: center; margin: 0; }
-.gallery-item figcaption { margin-top: 1rem; font-size: .95rem; line-height: 1.7; color: var(--muted); }
+.gallery-item figcaption { margin-top: 1.6rem; font-size: .95rem; line-height: 1.7; color: var(--muted); }
 .gallery-item figcaption strong { display: block; color: var(--fg); font-size: 1.05rem; }
 @media (min-width: 720px) {
   .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; overflow: visible; padding-inline: 0; }
