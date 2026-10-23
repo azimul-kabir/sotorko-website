@@ -14,6 +14,7 @@ import pathlib
 from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
 
 ROOT = pathlib.Path(__file__).resolve().parent
+SHOT_SIZES = json.loads((ROOT / "assets/shots/manifest.json").read_text())  # written by scripts/optimize_shots.py
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
 TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos"}
@@ -89,7 +90,7 @@ def footer(c, *, base, privacy_href):
 
 def phone(c, base):
     """A real screenshot (the result of a message check) in a phone frame. width/height keep the layout still while it loads."""
-    return (f'<div class="shot hero-shot"><img src="{base}assets/shots/{c["lang"]}/result.webp" width="720" height="1493" '
+    return (f'<div class="shot hero-shot"><img src="{base}assets/shots/{c["lang"]}/result.webp" width="{SHOT_SIZES[c["lang"] + "/result"][0]}" height="{SHOT_SIZES[c["lang"] + "/result"][1]}" '
             f'alt="{e(c["hero_alt"])}" decoding="async" fetchpriority="high"></div>')
 
 
@@ -103,10 +104,12 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     scams = "".join(
         f'<article class="scam"><h3>{e(t)}</h3><span class="label">{e(c["look"])}</span><p>{e(l)}</p><span class="label">{e(c["do"])}</span><p class="do">{e(d)}</p></article>'
         for t, l, d in c["scams"])
-    shots = "".join(
-        f'<figure class="gallery-item"><div class="shot"><img src="{base}assets/shots/{c["lang"]}/{name}.webp" width="720" height="1493" '
-        f'alt="{e(alt)}" loading="lazy" decoding="async"></div><figcaption><strong>{e(title)}</strong>{e(text)}</figcaption></figure>'
-        for name, title, text, alt in c["screens"])
+    def figure(name, title, text, alt):
+        width, height = SHOT_SIZES[f"{c['lang']}/{name}"]
+        frame = "paper" if name == "gd" else "shot"  # the GD letter is a sheet of paper, the rest are phone screens
+        return (f'<figure class="gallery-item"><div class="{frame}"><img src="{base}assets/shots/{c["lang"]}/{name}.webp" width="{width}" height="{height}" '
+                f'alt="{e(alt)}" loading="lazy" decoding="async"></div><figcaption><strong>{e(title)}</strong>{e(text)}</figcaption></figure>')
+    shots = "".join(figure(*item) for item in c["screens"])
     points = "".join(f"<li>{e(x)}</li>" for x in c["privacy_points"])
     digits = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯") if c["lang"] == "bn" else {}
     hotlines = "".join(f'<a class="hotline" href="tel:{n}">{e(name)}<span>{n.translate(digits)}</span></a>' for name, n in c["hotlines"])
