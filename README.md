@@ -35,6 +35,20 @@ python3 build.py
 
 Never edit `data/privacy.json` or `privacy/index.html` by hand.
 
+### Screenshots
+
+The phone pictures are real screenshots of the app (a made-up example message, no real data), in Bangla and English, as small WebP files in `assets/shots/`. They go stale when the app's screens change, so refresh them then:
+
+```bash
+# in the app repository, with an emulator or phone connected and a debug build installed
+python3 tools/capture_screenshots.py /tmp/raw
+# then here (needs Pillow: pip install pillow)
+python3 scripts/optimize_shots.py /tmp/raw
+python3 build.py && python3 scripts/check_site.py
+```
+
+The same raw captures work for the Play Store listing. The check script fails the build if an image lacks alt text or fixed dimensions.
+
 ### Illustrations
 
 `assets/icons/*.svg` are exported from the app's own tile art (`python3 tools/build_icons.py --svg ../sotorko-website/assets/icons` in the app repository), so the site and the app match. `assets/logo.svg` and `favicon.svg` use the app's launcher letter.
@@ -46,6 +60,7 @@ The site is served by a Cloudflare Worker with static assets: no Worker code, on
 | File | Purpose |
 | --- | --- |
 | `wrangler.jsonc` | Names the project (`sotorko-website`), serves `_site/`, shows `404.html` for unknown addresses, and attaches the custom domain `sotorko.azimulkabir.com` on deploy (its DNS is on Cloudflare, so the record is created for you). |
+| `scripts/optimize_shots.py` | (Not part of the build.) Turns raw app screenshots into WebP. |
 | `scripts/stage.py` | Collects exactly what is served into `_site/`. Build scripts, data and docs are never published. |
 | `cloudflare/_headers` | Security headers (a strict Content Security Policy that allows only this site's own files, no framing, no sensors) and cache times. |
 | `cloudflare/_redirects` | `/policy` and `/privacy-policy` go to `/privacy/`. |

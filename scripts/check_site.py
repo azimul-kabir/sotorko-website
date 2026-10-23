@@ -32,6 +32,12 @@ for page in PAGES:
         if needed not in source:
             fail(f"{page} lacks {needed}")
 
+    for tag in re.findall(r"<img\b[^>]*>", source):
+        if "alt=" not in tag:
+            fail(f"{page}: an <img> has no alt attribute: {tag[:80]}")
+        if "width=" not in tag or "height=" not in tag:
+            fail(f"{page}: an <img> has no width/height (the page would jump while loading): {tag[:80]}")
+
     for ref in re.findall(r'(?:href|src)="([^"]+)"', source):
         if ref.startswith(("http://", "https://", "mailto:", "tel:")):
             continue

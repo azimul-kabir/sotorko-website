@@ -88,17 +88,9 @@ def footer(c, *, base, privacy_href):
 
 
 def phone(c, base):
-    t = c["tiles"]
-    def tile(key, cls):
-        return f'<div class="mock-tile {cls}"><img src="{base}assets/icons/{key}.svg" alt="" width="50" height="50">{e(t[key])}</div>'
-    return f"""<div class="phone" aria-hidden="true">
-<div class="top"><img src="{base}assets/logo.svg" alt="" width="30" height="30"><span>{e(c['name'])}</span></div>
-<p class="tag">{e(c['phone_tagline'])}</p>
-<div class="mock-grid">
-{tile('message', 't-message')}{tile('number', 't-number')}{tile('family', 't-family')}{tile('hotline', 't-hotline')}
-<div class="mock-tile mock-wide t-sos"><img src="{base}assets/icons/sos.svg" alt="" width="40" height="40">{e(t['sos'])}</div>
-</div>
-</div>"""
+    """A real screenshot (the result of a message check) in a phone frame. width/height keep the layout still while it loads."""
+    return (f'<div class="shot hero-shot"><img src="{base}assets/shots/{c["lang"]}/result.webp" width="720" height="1493" '
+            f'alt="{e(c["hero_alt"])}" decoding="async" fetchpriority="high"></div>')
 
 
 def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
@@ -111,6 +103,10 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     scams = "".join(
         f'<article class="scam"><h3>{e(t)}</h3><span class="label">{e(c["look"])}</span><p>{e(l)}</p><span class="label">{e(c["do"])}</span><p class="do">{e(d)}</p></article>'
         for t, l, d in c["scams"])
+    shots = "".join(
+        f'<figure class="gallery-item"><div class="shot"><img src="{base}assets/shots/{c["lang"]}/{name}.webp" width="720" height="1493" '
+        f'alt="{e(alt)}" loading="lazy" decoding="async"></div><figcaption><strong>{e(title)}</strong>{e(text)}</figcaption></figure>'
+        for name, title, text, alt in c["screens"])
     points = "".join(f"<li>{e(x)}</li>" for x in c["privacy_points"])
     digits = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯") if c["lang"] == "bn" else {}
     hotlines = "".join(f'<a class="hotline" href="tel:{n}">{e(name)}<span>{n.translate(digits)}</span></a>' for name, n in c["hotlines"])
@@ -146,6 +142,14 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <div class="wrap">
 <h2 id="how-h">{e(c['how_title'])}</h2>
 <ol class="steps">{steps}</ol>
+</div>
+</section>
+
+<section id="screens" class="tint-green" aria-labelledby="shots-h">
+<div class="wrap">
+<h2 id="shots-h">{e(c['screens_title'])}</h2>
+<div class="gallery" tabindex="0" role="group" aria-labelledby="shots-h">{shots}</div>
+<p class="small">{e(c['screens_note'])}</p>
 </div>
 </section>
 
