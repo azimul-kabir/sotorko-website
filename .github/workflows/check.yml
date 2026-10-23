@@ -1,0 +1,39 @@
+name: Check
+
+# Publishing is done by Cloudflare (Workers Builds), which runs these same checks first.
+# This workflow gives every push and pull request a visible pass or fail on GitHub as well.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Rebuild the pages
+        run: python3 build.py
+
+      - name: Make sure the committed pages match a fresh build
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::The generated pages are out of date. Run 'python3 build.py' and commit the result."
+            git status --short
+            git --no-pager diff --stat
+            exit 1
+          fi
+
+      - name: Check links, anchors and basics
+        run: python3 scripts/check_site.py
+
+      - name: Collect the files the site serves
+        run: python3 scripts/stage.py

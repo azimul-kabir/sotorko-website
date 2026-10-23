@@ -145,6 +145,7 @@ details p { color: var(--muted); }
 /* footer */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; font-size: .95rem; color: var(--muted); }
 .foot { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+.foot-note { margin-top: 1.2rem; }
 .foot nav { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
 
 /* privacy page */

@@ -8,7 +8,7 @@ The website for [Sotorko (সতর্ক)](https://sotorko.azimulkabir.com), an
 | `/en/` | Home page in English |
 | `/privacy/` | The app's privacy policy, Bangla first, then English |
 
-It is plain static HTML and CSS: no JavaScript, no trackers, no requests to other sites (the Bangla font is self-hosted), and it respects light and dark mode and reduced motion. All links between pages are relative, so it works on the custom domain and on the `github.io` project address.
+It is plain static HTML and CSS: no JavaScript, no trackers, no requests to other sites (the Bangla font is self-hosted), and it respects light and dark mode and reduced motion. It is hosted on Cloudflare Workers (static assets). All links between pages are relative, so it also works under any other address, such as a preview URL.
 
 ## Editing
 
@@ -18,7 +18,7 @@ Everything you read on the site lives in [`content.py`](content.py), in Bangla a
 python3 build.py        # needs only Python 3, no packages
 ```
 
-`build.py` writes `index.html`, `en/index.html`, `privacy/index.html`, `404.html`, `sitemap.xml`, `robots.txt` and `CNAME`. **Commit the generated files**: they are what gets published, and CI fails if they are stale. The build refuses to run if the two languages get out of step.
+`build.py` writes `index.html`, `en/index.html`, `privacy/index.html`, `404.html`, `sitemap.xml` and `robots.txt`. **Commit the generated files**: they are what gets published, and CI fails if they are stale. The build refuses to run if the two languages get out of step.
 
 Look at it locally with `python3 -m http.server` and open http://localhost:8000.
 
@@ -39,31 +39,47 @@ Never edit `data/privacy.json` or `privacy/index.html` by hand.
 
 `assets/icons/*.svg` are exported from the app's own tile art (`python3 tools/build_icons.py --svg ../sotorko-website/assets/icons` in the app repository), so the site and the app match. `assets/logo.svg` and `favicon.svg` use the app's launcher letter.
 
-## Publishing (automatic)
+## Publishing (Cloudflare Workers)
 
-Every push to `main` is published by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). You never deploy by hand.
+The site is served by a Cloudflare Worker with static assets: no Worker code, only files. Everything it needs is in the repo:
 
-1. **check**: rebuilds the pages with `build.py` and fails if what is committed differs (so you cannot forget to commit the generated files), then runs `scripts/check_site.py` (links, images, in-page anchors, page basics, sitemap).
-2. **deploy**: only if the check passes and only on `main`; publishes just the files the site serves to GitHub Pages.
+| File | Purpose |
+| --- | --- |
+| `wrangler.jsonc` | Names the project (`sotorko-website`), serves `_site/`, shows `404.html` for unknown addresses, and attaches the custom domain `sotorko.azimulkabir.com` on deploy (its DNS is on Cloudflare, so the record is created for you). |
+| `scripts/stage.py` | Collects exactly what is served into `_site/`. Build scripts, data and docs are never published. |
+| `cloudflare/_headers` | Security headers (a strict Content Security Policy that allows only this site's own files, no framing, no sensors) and cache times. |
+| `cloudflare/_redirects` | `/policy` and `/privacy-policy` go to `/privacy/`. |
 
-Pull requests run the checks but publish nothing. Run the same checks locally before pushing:
+### One-time setup in the Cloudflare dashboard
+
+1. **Workers & Pages, Create, Import a repository** (connect GitHub, choose `azimul-kabir/sotorko-website`).
+2. **Project name**: `sotorko-website` (it must match `name` in `wrangler.jsonc`).
+3. **Build command**: `python3 build.py && python3 scripts/check_site.py && python3 scripts/stage.py`
+   **Deploy command**: `npx wrangler deploy` (the default).
+4. Save and deploy. After this, every push to `main` builds and publishes by itself.
+
+Because the checks are part of the build command, **a failing check stops the deploy**: the previous version stays live. Other branches and pull requests get preview URLs and are never published to the real domain.
+
+The first deploy also creates the DNS record for `sotorko.azimulkabir.com` and issues its HTTPS certificate (usually a minute or two). Check it under the Worker's **Settings, Domains & Routes**. The app's About screen links to `https://sotorko.azimulkabir.com/privacy`, so this must work before the app is published.
+
+### Without the dashboard
 
 ```bash
-python3 build.py && python3 scripts/check_site.py
+npm install                  # once, installs wrangler
+npx wrangler login           # once, opens the browser
+npm run deploy               # build, check, stage, publish
+npm run preview              # same, but serves it on http://localhost:8787
 ```
 
-The workflow's actions are kept current by Dependabot (monthly).
+### GitHub
 
-### One-time setup
+[`.github/workflows/check.yml`](.github/workflows/check.yml) runs the same build, freshness check, link check and staging on every push and pull request, so there is a pass or fail on GitHub too. It does not publish. Dependabot keeps its actions and wrangler current (monthly).
 
-- **Pages source** is set to **GitHub Actions** (Settings, Pages). Already done.
-- **Custom domain** `sotorko.azimulkabir.com`:
-  1. At the domain registrar add a DNS record: type `CNAME`, name `sotorko`, value `azimul-kabir.github.io`.
-  2. When DNS has spread, set the domain: Settings, Pages, Custom domain (or `gh api -X PUT repos/azimul-kabir/sotorko-website/pages -f cname=sotorko.azimulkabir.com`), then tick **Enforce HTTPS**.
+Run the checks yourself before pushing:
 
-  Set the domain only after the DNS record exists; before that, the site is reachable at https://azimul-kabir.github.io/sotorko-website/.
-
-The app's About screen links to `https://sotorko.azimulkabir.com/privacy`, so the custom domain must work before the app is published.
+```bash
+python3 build.py && python3 scripts/check_site.py && python3 scripts/stage.py
+```
 
 ## Credits and licence
 

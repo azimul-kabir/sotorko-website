@@ -1,0 +1,17 @@
+# Applied by Cloudflare to every response (see the Workers docs, "Headers").
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# Stylesheet and images: cached for a day so a change reaches people quickly.
+/assets/*
+  Cache-Control: public, max-age=86400
+
+# The font file never changes between releases. "!" first removes the value set by the rule above,
+# otherwise both would be sent.
+/assets/fonts/*
+  ! Cache-Control
+  Cache-Control: public, max-age=2592000

@@ -1,7 +1,12 @@
 version: 2
 updates:
-  # Keeps the actions used by the workflow up to date.
+  # Keeps the GitHub Actions used by the check workflow up to date.
   - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  # Keeps wrangler (the Cloudflare deploy tool) up to date.
+  - package-ecosystem: npm
     directory: /
     schedule:
       interval: monthly

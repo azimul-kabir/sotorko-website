@@ -4,8 +4,8 @@
     python3 build.py
 
 Writes index.html (Bangla, the default), en/index.html (English), privacy/index.html (both languages),
-404.html, sitemap.xml, robots.txt, CNAME and .nojekyll. Links between pages are relative, so the site
-works on the custom domain and on the GitHub project address alike.
+404.html, sitemap.xml and robots.txt. Links between pages are relative, so the site
+works on the custom domain and under any other address (a preview URL, a local server) alike.
 """
 import html
 import json
@@ -79,7 +79,7 @@ def footer(c, *, base, privacy_href):
 <div><strong>{e(c['name'])}</strong><br>{e(c['copyright'])}</div>
 <nav aria-label="{e(c['name'])}">{links}<a href="mailto:{EMAIL}">{e(c['contact'])}: {EMAIL}</a></nav>
 </div>
-<p class="small" style="margin-top:1.2rem">{e(c['disclaimer'])}</p>
+<p class="small foot-note">{e(c['disclaimer'])}</p>
 </div>
 </footer>
 </body>
@@ -255,8 +255,6 @@ def main():
     sm.append("</urlset>")
     write("sitemap.xml", "\n".join(sm) + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    write("CNAME", SITE.removeprefix("https://") + "\n")
-    write(".nojekyll", "")
 
 
 if __name__ == "__main__":
