@@ -4,7 +4,7 @@
     python3 scripts/stage.py
 
 Copies the generated pages and assets plus the Cloudflare _headers and _redirects, so build scripts, data
-and docs are never published. Run python3 build.py first.
+and docs are not published when this folder is what Cloudflare serves. Run python3 build.py first.
 """
 import pathlib
 import shutil
@@ -12,7 +12,7 @@ import shutil
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 SERVED = ["index.html", "404.html", "sitemap.xml", "robots.txt", "en", "privacy", "assets"]
-CONFIG = ["_headers", "_redirects"]  # kept in cloudflare/, must sit in the served folder to take effect
+CONFIG = ["_headers", "_redirects"]  # live at the repo root (where Cloudflare reads them if the whole repo is published) and are copied into _site/ too
 
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -23,7 +23,7 @@ for name in SERVED:
         raise SystemExit(f"{name} is missing: run python3 build.py first")
     shutil.copytree(source, OUT / name) if source.is_dir() else shutil.copy2(source, OUT / name)
 for name in CONFIG:
-    shutil.copy2(ROOT / "cloudflare" / name, OUT / name)
+    shutil.copy2(ROOT / name, OUT / name)
 # Tell Cloudflare not to serve the two config files as ordinary pages.
 (OUT / ".assetsignore").write_text("_headers\n_redirects\n.assetsignore\n")
 

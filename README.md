@@ -62,8 +62,15 @@ The site is served by a Cloudflare Worker with static assets: no Worker code, on
 | `wrangler.jsonc` | Names the project (`sotorko-website`), serves `_site/`, shows `404.html` for unknown addresses, and attaches the custom domain `sotorko.azimulkabir.com` on deploy (its DNS is on Cloudflare, so the record is created for you). |
 | `scripts/optimize_shots.py` | (Not part of the build.) Turns raw app screenshots into WebP. |
 | `scripts/stage.py` | Collects exactly what is served into `_site/`. Build scripts, data and docs are never published. |
-| `cloudflare/_headers` | Security headers (a strict Content Security Policy that allows only this site's own files, no framing, no sensors) and cache times. |
-| `cloudflare/_redirects` | `/policy` and `/privacy-policy` go to `/privacy/`. |
+| `_headers` | Security headers (a strict Content Security Policy that allows only this site's own files, no framing, no sensors) and cache times. |
+| `_redirects` | `/policy` and `/privacy-policy` go to `/privacy/`. |
+
+`_headers` and `_redirects` sit at the top of the repo on purpose: Cloudflare only reads them from the top of the folder it publishes, and `stage.py` copies them into `_site/` too, so they work whichever way the project is set up.
+
+### What is published
+
+- **Works as it is:** a Cloudflare project connected to this repo with no build command publishes the whole repository folder. The site works, with the headers and redirects above, but the source files (`build.py`, `content.py`, `data/`, `wrangler.jsonc`) are served as well. They are public on GitHub anyway, so nothing secret is exposed, but it is untidy.
+- **Tidier (recommended):** in the Cloudflare project's settings set the **build command** to `python3 build.py && python3 scripts/check_site.py && python3 scripts/stage.py` and the **build output directory** to `_site`. Then only the site's own files are published, and a failing check stops a deploy.
 
 ### One-time setup in the Cloudflare dashboard
 
