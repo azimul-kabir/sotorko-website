@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sotorko.azimulkabir.com/sitemap.xml
