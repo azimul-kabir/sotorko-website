@@ -18,7 +18,7 @@ Everything you read on the site lives in [`content.py`](content.py), in Bangla a
 python3 build.py        # needs only Python 3, no packages
 ```
 
-`build.py` writes `index.html`, `en/index.html`, `privacy/index.html`, `404.html`, `sitemap.xml`, `robots.txt` and `CNAME`. **Commit the generated files**: GitHub Pages serves them as they are. The build refuses to run if the two languages get out of step.
+`build.py` writes `index.html`, `en/index.html`, `privacy/index.html`, `404.html`, `sitemap.xml`, `robots.txt` and `CNAME`. **Commit the generated files**: they are what gets published, and CI fails if they are stale. The build refuses to run if the two languages get out of step.
 
 Look at it locally with `python3 -m http.server` and open http://localhost:8000.
 
@@ -39,13 +39,31 @@ Never edit `data/privacy.json` or `privacy/index.html` by hand.
 
 `assets/icons/*.svg` are exported from the app's own tile art (`python3 tools/build_icons.py --svg ../sotorko-website/assets/icons` in the app repository), so the site and the app match. `assets/logo.svg` and `favicon.svg` use the app's launcher letter.
 
-## Putting it online (GitHub Pages)
+## Publishing (automatic)
 
-1. **Settings, Pages**: deploy from branch `main`, folder `/ (root)`.
-2. **Custom domain**: `sotorko.azimulkabir.com` (the `CNAME` file already says so). At your domain registrar add a DNS record: type `CNAME`, name `sotorko`, value `azimul-kabir.github.io`.
-3. When GitHub shows the domain as verified, tick **Enforce HTTPS**.
+Every push to `main` is published by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). You never deploy by hand.
 
-The app's About screen links to `https://sotorko.azimulkabir.com/privacy`, so that address must work before the app is published.
+1. **check**: rebuilds the pages with `build.py` and fails if what is committed differs (so you cannot forget to commit the generated files), then runs `scripts/check_site.py` (links, images, in-page anchors, page basics, sitemap).
+2. **deploy**: only if the check passes and only on `main`; publishes just the files the site serves to GitHub Pages.
+
+Pull requests run the checks but publish nothing. Run the same checks locally before pushing:
+
+```bash
+python3 build.py && python3 scripts/check_site.py
+```
+
+The workflow's actions are kept current by Dependabot (monthly).
+
+### One-time setup
+
+- **Pages source** is set to **GitHub Actions** (Settings, Pages). Already done.
+- **Custom domain** `sotorko.azimulkabir.com`:
+  1. At the domain registrar add a DNS record: type `CNAME`, name `sotorko`, value `azimul-kabir.github.io`.
+  2. When DNS has spread, set the domain: Settings, Pages, Custom domain (or `gh api -X PUT repos/azimul-kabir/sotorko-website/pages -f cname=sotorko.azimulkabir.com`), then tick **Enforce HTTPS**.
+
+  Set the domain only after the DNS record exists; before that, the site is reachable at https://azimul-kabir.github.io/sotorko-website/.
+
+The app's About screen links to `https://sotorko.azimulkabir.com/privacy`, so the custom domain must work before the app is published.
 
 ## Credits and licence
 
