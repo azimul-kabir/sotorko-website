@@ -41,7 +41,7 @@ for page in PAGES:
     for ref in re.findall(r'(?:href|src)="([^"]+)"', source):
         if ref.startswith(("http://", "https://", "mailto:", "tel:")):
             continue
-        target, _, anchor = ref.partition("#")
+        target, _, anchor = ref.split("?")[0].partition("#")
         if target:
             found = (base / target).resolve() if not target.startswith("/") else (ROOT / target.lstrip("/")).resolve()
             if found.is_dir():

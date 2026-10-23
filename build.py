@@ -7,6 +7,7 @@ Writes index.html (Bangla, the default), en/index.html (English), privacy/index.
 404.html, sitemap.xml and robots.txt. Links between pages are relative, so the site
 works on the custom domain and under any other address (a preview URL, a local server) alike.
 """
+import hashlib
 import html
 import json
 import pathlib
@@ -14,6 +15,8 @@ import pathlib
 from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
 
 ROOT = pathlib.Path(__file__).resolve().parent
+# A short fingerprint on the stylesheet link, so a changed stylesheet is fetched at once despite the day-long cache.
+CSS_VERSION = hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:8]
 SHOT_SIZES = json.loads((ROOT / "assets/shots/manifest.json").read_text())  # written by scripts/optimize_shots.py
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
@@ -44,7 +47,7 @@ def head(c, *, title, description, path, alt_links, base, og=True):
 <meta name="theme-color" content="#0b6e4f">
 <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="{base}assets/fonts/NotoSansBengali.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{base}assets/style.css">
+<link rel="stylesheet" href="{base}assets/style.css?v={CSS_VERSION}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{e(BN['name'])} / {e(EN['name'])}">
 <meta property="og:title" content="{e(title)}">
