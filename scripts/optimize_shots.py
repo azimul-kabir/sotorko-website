@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Turns raw app screenshots into the small WebP files the site serves.
 
-    python3 scripts/optimize_shots.py RAW_DIR          # RAW_DIR has bn/ and en/ with home|result|scammed|family .png
+    python3 scripts/optimize_shots.py RAW_DIR [--top N] [--bottom N]
+        # RAW_DIR has bn/ and en/ with home|result|scammed|family|gd .png. --top and --bottom are the pixels of the
+        # capture that belong to Android (status bar, gesture or navigation bar); the defaults suit a phone captured
+        # at 1080x2400 with gesture navigation (see the app repo's capture_screenshots.py). A 3-button navigation bar needs about --bottom 135.
 
 The raw PNGs come from the app repo's tools/capture_screenshots.py. Needs Pillow (pip install pillow); the
 site build itself does not, because the optimised files are committed. Output: assets/shots/{bn,en}/NAME.webp
@@ -16,7 +19,11 @@ from PIL import Image, ImageChops
 NAMES = ["home", "result", "scammed", "family"]  # phone screens
 PAPER = "gd"  # the print preview of the GD letter: only the white sheet is kept
 WIDTH = 720
-TOP, BOTTOM = 100, 135  # pixels of the 1080x2400 capture that belong to Android (status bar, navigation bar), not the app
+def option(name, default):
+    return int(sys.argv[sys.argv.index(name) + 1]) if name in sys.argv else default
+
+
+TOP, BOTTOM = option("--top", 72), option("--bottom", 40)
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 def paper_only(image):
@@ -32,7 +39,7 @@ def paper_only(image):
     return image.crop((left, top, right, bottom))
 
 
-raw = pathlib.Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else sys.exit(__doc__)
+raw = pathlib.Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else sys.exit(__doc__)
 sizes = {}
 for lang in ("bn", "en"):
     for name in NAMES + [PAPER]:

@@ -20,6 +20,10 @@ ROOT = pathlib.Path(__file__).resolve().parent
 # A short fingerprint on the stylesheet link, so a changed stylesheet is fetched at once despite the day-long cache.
 CSS_VERSION = hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:8]
 SHOT_SIZES = json.loads((ROOT / "assets/shots/manifest.json").read_text())  # written by scripts/optimize_shots.py
+# The phone frames reserve their height in CSS (no inline styles are allowed), so the pictures must all match the ratio written there.
+_phone = {tuple(v) for k, v in SHOT_SIZES.items() if not k.endswith("/gd")}
+assert len(_phone) == 1, f"the phone screenshots differ in size: {_phone}"
+assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 2, "update the aspect-ratio of .shot img and .stage in assets/style.css to the screenshots' size"
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
 TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos"}

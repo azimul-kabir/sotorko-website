@@ -90,13 +90,13 @@ p { margin: 0 0 1em; }
 
 /* real screenshots, in a simple phone frame */
 .shot { width: min(300px, 100%); margin-inline: auto; border: 9px solid #1b1b18; border-radius: 38px; overflow: hidden; background: #1b1b18; box-shadow: 0 18px 40px rgba(0, 0, 0, .18); }
-.shot img { display: block; width: 100%; height: auto; aspect-ratio: 720 / 1493; }
+.shot img { display: block; width: 100%; height: auto; aspect-ratio: 720 / 1525; }
 .hero-shot { width: min(290px, 100%); }
 .paper { width: min(300px, 100%); margin-inline: auto; background: #fff; border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 14px 34px rgba(0, 0, 0, .16); overflow: hidden; }
 .paper img { display: block; width: 100%; height: auto; }
 .gallery-item { align-self: start; }
 /* every picture sits in a box as tall as a phone frame, so the captions line up even under the shorter paper sheet */
-.stage { width: min(300px, 100%); margin: 0 auto -18px; aspect-ratio: 720 / 1443; }
+.stage { width: min(300px, 100%); margin: 0 auto -18px; aspect-ratio: 720 / 1525; }
 .stage .shot, .stage .paper { width: 100%; }
 .gallery { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .5rem .2rem 1rem; margin-top: 1.5rem; scrollbar-width: thin; }
 .gallery-item { flex: 0 0 min(72%, 300px); scroll-snap-align: center; margin: 0; }
@@ -145,6 +145,7 @@ section { padding: 3.2rem 0; }
 .also li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .3rem 1rem; font-size: .95rem; }
 .scam-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
 @media (min-width: 760px) { .scam-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .scam-grid { grid-template-columns: repeat(3, 1fr); } }
 .scam { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
 .scam .label { display: block; font-size: .85rem; font-weight: 700; color: var(--muted); margin-top: .6rem; }
 .scam .do { border-left: 4px solid var(--green); padding-left: .8rem; margin-top: .3rem; }
