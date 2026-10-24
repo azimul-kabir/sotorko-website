@@ -49,6 +49,10 @@ python3 build.py && python3 scripts/check_site.py
 
 The same raw captures work for the Play Store listing. The check script fails the build if an image lacks alt text or fixed dimensions.
 
+### What's new
+
+The "What's new" section shows the newest entry of `data/releases.json`: `version`, an ISO `date`, and the same number of highlights in `en` and `bn`. `build.py` fails if they do not match. The app repository's release procedure (AGENTS.md there) adds a new first entry after each release, so the section follows the app; older entries stay in the file but only the first is shown.
+
 ### Share image
 
 `assets/og.png` (2400x1260) is the picture shown when a page is shared on WhatsApp, Facebook and the like. It is the app repository's hero banner, `docs/banner.png`; copy it over this file when the banner changes. It is not shown on the pages themselves.

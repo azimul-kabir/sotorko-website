@@ -110,6 +110,12 @@ p { margin: 0 0 1em; }
   .gallery { grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
 }
 
+/* what's new */
+.release { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.6rem; max-width: 46rem; margin-top: 1.2rem; }
+.release h3 { margin: 0; }
+.release .small { margin: .2rem 0 .8rem; }
+.release .checks { margin-bottom: 0; }
+
 /* sections */
 section { padding: 3.2rem 0; }
 .tint-green { background: var(--t-green); }

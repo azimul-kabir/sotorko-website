@@ -7,10 +7,12 @@ Writes index.html (Bangla, the default), en/index.html (English), privacy/index.
 404.html, sitemap.xml and robots.txt. Links between pages are relative, so the site
 works on the custom domain and under any other address (a preview URL, a local server) alike.
 """
+import datetime
 import hashlib
 import html
 import json
 import pathlib
+import re
 
 from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
 
@@ -57,6 +59,33 @@ def head(c, *, title, description, path, alt_links, base, og=True):
 {'<meta property="og:image" content="' + SITE + '/assets/og.png">' + chr(10) + '<meta name="twitter:card" content="summary_large_image">' if (ROOT / 'assets/og.png').exists() and og else '<meta name="twitter:card" content="summary">'}
 </head>
 """
+
+
+def latest_release():
+    """The newest entry of data/releases.json (the release procedure in the app repo's AGENTS.md adds one after each release)."""
+    releases = json.loads((ROOT / "data/releases.json").read_text(encoding="utf-8"))
+    latest = releases[0]
+    assert re.fullmatch(r"\d+\.\d+\.\d+", latest["version"]), "version must look like 1.2.3"
+    datetime.date.fromisoformat(latest["date"])
+    assert latest["en"] and len(latest["en"]) == len(latest["bn"]), "releases.json needs the same number of English and Bangla points"
+    return latest
+
+
+BN_MONTHS = "জানুয়ারি ফেব্রুয়ারি মার্চ এপ্রিল মে জুন জুলাই আগস্ট সেপ্টেম্বর অক্টোবর নভেম্বর ডিসেম্বর".split()
+
+
+def release_section(c):
+    rel = latest_release()
+    day = datetime.date.fromisoformat(rel["date"])
+    if c["lang"] == "bn":
+        date = f"{day.day} {BN_MONTHS[day.month - 1]} {day.year}".translate(str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯"))
+    else:
+        date = f"{day.day} {day.strftime('%B %Y')}"
+    version = rel["version"].translate(str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯")) if c["lang"] == "bn" else rel["version"]
+    points = "".join(f"<li>{e(x)}</li>" for x in rel[c["lang"]])
+    return (f'<section id="whats-new" aria-labelledby="new-h">\n<div class="wrap">\n<h2 id="new-h">{e(c["new_title"])}</h2>\n'
+            f'<article class="release"><h3>{e(c["name"])} {e(version)}</h3><p class="small"><time datetime="{rel["date"]}">{e(date)}</time></p>'
+            f'<ul class="checks">{points}</ul></article>\n</div>\n</section>\n')
 
 
 def header(c, *, base, home, switch_href, nav=True):
@@ -159,6 +188,7 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
+{release_section(c)}
 <section id="features" aria-labelledby="feat-h">
 <div class="wrap">
 <h2 id="feat-h">{e(c['features_title'])}</h2>

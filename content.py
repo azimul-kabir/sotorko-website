@@ -17,7 +17,7 @@ BN = {
     "skip": "মূল অংশে যান",
     "switch_label": "English",
     "switch_aria": "Read this page in English",
-    "nav": [("how", "কীভাবে কাজ করে"), ("screens", "অ্যাপের ছবি"), ("features", "কী কী পাবেন"), ("scams", "চেনা প্রতারণা"), ("privacy", "গোপনীয়তা"), ("faq", "প্রশ্নোত্তর")],
+    "nav": [("how", "কীভাবে কাজ করে"), ("screens", "অ্যাপের ছবি"), ("whats-new", "নতুন কী"), ("features", "কী কী পাবেন"), ("scams", "চেনা প্রতারণা"), ("privacy", "গোপনীয়তা"), ("faq", "প্রশ্নোত্তর")],
     "hero_title": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_text": "সতর্ক আপনার ফোনেই সন্দেহজনক মেসেজ ও নম্বর যাচাই করে, প্রতারণার লক্ষণ বাংলায় বুঝিয়ে দেয় এবং শুনিয়েও দেয়। বিকাশ, নগদ বা ব্যাংকের নামে আসা ভুয়া মেসেজ চিনতে সাহায্য করে।",
     "soon": "Google Play-তে শীঘ্রই আসছে",
@@ -26,6 +26,7 @@ BN = {
     "phone_tagline": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_alt": "মেসেজ যাচাইয়ের ফল: লাল \"বিপদ\" বার্তা, কে পাঠিয়েছে তার তিনটি বিকল্প এবং ভুলে পাঠানো টাকা ফেরত চাওয়ার সতর্কতা।",
     "screens_title": "অ্যাপটি দেখতে যেমন",
+    "new_title": "নতুন কী",
     "screens_note": "ছবির মেসেজ ও তথ্য বানানো উদাহরণ। এখানে কারো আসল তথ্য নেই।",
     "screens": [
         ("home", "সবকিছু এক জায়গায়", "বড় ছবির বোতামে মেসেজ ও নম্বর যাচাই, হটলাইন আর পরিবার সুরক্ষা। পড়তে হয় কম, বুঝতে সহজ।",
@@ -108,7 +109,7 @@ EN = {
     "skip": "Skip to content",
     "switch_label": "বাংলা",
     "switch_aria": "এই পাতা বাংলায় পড়ুন",
-    "nav": [("how", "How it works"), ("screens", "Screenshots"), ("features", "What you get"), ("scams", "Common scams"), ("privacy", "Privacy"), ("faq", "FAQ")],
+    "nav": [("how", "How it works"), ("screens", "Screenshots"), ("whats-new", "What's new"), ("features", "What you get"), ("scams", "Common scams"), ("privacy", "Privacy"), ("faq", "FAQ")],
     "hero_title": "Check once before you send money",
     "hero_text": "Sotorko checks suspicious messages and numbers on your own phone, explains the warning signs in plain Bangla and reads them aloud. It helps you spot fake messages sent in the name of bKash, Nagad or your bank.",
     "soon": "Coming soon to Google Play",
@@ -117,6 +118,7 @@ EN = {
     "phone_tagline": "Check once before you send money",
     "hero_alt": "The result of a message check: a red danger notice, three choices for who sent the message, and a warning about being asked to return money sent by mistake.",
     "screens_title": "See the app",
+    "new_title": "What's new",
     "screens_note": "The message and details in the pictures are made-up examples. They show nobody's real information.",
     "screens": [
         ("home", "Everything in one place", "Big picture buttons for checking a message or a number, the hotlines and the family guardian. Little to read, easy to follow.",
