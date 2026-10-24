@@ -37,17 +37,25 @@ Never edit `data/privacy.json` or `privacy/index.html` by hand.
 
 ### Screenshots
 
-The phone pictures are real screenshots of the app (a made-up example message, no real data), in Bangla and English, as small WebP files in `assets/shots/`. They go stale when the app's screens change, so refresh them then:
+The pictures are real screenshots of the app (a made-up example message and made-up names, no real data), in Bangla and English, as small WebP files in `assets/shots/`: four phone screens (home, check result, "I've been scammed", family guardian) and the filled-in GD application, cropped to the white page. `assets/shots/manifest.json` records their sizes for the page. They go stale when the app's screens change, so refresh them then:
 
 ```bash
 # in the app repository, with an emulator or phone connected and a debug build installed
-python3 tools/capture_screenshots.py /tmp/raw
+python3 tools/capture_screenshots.py /tmp/raw     # add --only gd to retake one screen; set ANDROID_SERIAL if several devices are attached
 # then here (needs Pillow: pip install pillow)
 python3 scripts/optimize_shots.py /tmp/raw
 python3 build.py && python3 scripts/check_site.py
 ```
 
 The same raw captures work for the Play Store listing. The check script fails the build if an image lacks alt text or fixed dimensions.
+
+### Share image
+
+`assets/og.png` (2400x1260) is the picture shown when a page is shared on WhatsApp, Facebook and the like. It is the app repository's hero banner, `docs/banner.png`; copy it over this file when the banner changes. It is not shown on the pages themselves.
+
+### Caching
+
+Files under `assets/` are cached for a day (`_headers`), so `build.py` puts a short fingerprint on the stylesheet link (`style.css?v=...`) and a changed stylesheet loads at once. The link checker ignores the query string.
 
 ### Illustrations
 
