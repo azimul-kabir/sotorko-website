@@ -1,19 +1,19 @@
 [
  {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "date": "2026-10-24",
   "en": [
    "Check a message or a number on your own phone and see the warning signs in plain Bangla or English, read aloud if you like.",
-   "Built on scam patterns documented in Bangladesh: fake fines, earning schemes that charge fees, courier fees, police or 999 impersonation, benefits that ask for money first, and fake \"account closed\" notices.",
-   "If you were scammed: one-tap hotline calls, a checklist, and a GD application that fills itself in and prints on one page.",
-   "Family guardian: a parent's dangerous check reaches you within about a minute, with a clear list of the people you protect.",
+   "Now also recognises fake fines and legal threats, earning schemes that charge fees, courier fees, police or 999 impersonation, and benefits that ask for money first.",
+   "If you were scammed: one-tap hotline calls (bKash, Nagad, Rocket, Upay and more), a checklist, and a GD application that fills itself in and prints on one page.",
+   "Family guardian: a parent's dangerous check reaches you within about a minute, with clear cards for the people you protect and a question before you remove anyone.",
    "Forms stay above the keyboard, and the text size goes up to Extra large."
   ],
   "bn": [
    "নিজের ফোনেই মেসেজ বা নম্বর যাচাই করুন; সহজ বাংলা বা ইংরেজিতে সতর্কতার লক্ষণ দেখুন, চাইলে শুনতেও পারবেন।",
-   "বাংলাদেশে নথিভুক্ত প্রতারণার ধরনের ওপর তৈরি: ভুয়া জরিমানা, ফি নিয়ে ঘরে বসে আয়ের ফাঁদ, কুরিয়ার ফি, পুলিশ বা ৯৯৯ পরিচয়ে চাপ, ভাতা পেতে আগে টাকা চাওয়া, আর \"একাউন্ট বন্ধ\"-র ভুয়া নোটিশ।",
-   "প্রতারিত হলে: এক ট্যাপে হটলাইনে ফোন, ধাপে ধাপে করণীয়, আর নিজে থেকে পূর্ণ হওয়া জিডির আবেদন যা এক পাতায় প্রিন্ট করা যায়।",
-   "পরিবার সুরক্ষা: বাবা-মা বিপজ্জনক মেসেজ যাচাই করলে প্রায় এক মিনিটের মধ্যে আপনি জানতে পারবেন; যাদের সুরক্ষা দিচ্ছেন তাঁদের তালিকাও এখন পরিষ্কার।",
+   "এখন ভুয়া জরিমানা ও মামলার ভয়, ফি নিয়ে আয়ের ফাঁদ, কুরিয়ার ফি, পুলিশ বা ৯৯৯ পরিচয়ে চাপ আর ভাতা পেতে আগে টাকা চাওয়াও চেনে।",
+   "প্রতারিত হলে: এক ট্যাপে হটলাইনে ফোন (বিকাশ, নগদ, রকেট, উপায় সহ), ধাপে ধাপে করণীয়, আর নিজে থেকে পূর্ণ হওয়া জিডির আবেদন যা এক পাতায় প্রিন্ট করা যায়।",
+   "পরিবার সুরক্ষা: বাবা-মা বিপজ্জনক মেসেজ যাচাই করলে প্রায় এক মিনিটের মধ্যে আপনি জানতে পারবেন; যাঁদের সুরক্ষা দিচ্ছেন তাঁদের কার্ড পরিষ্কার, আর সরানোর আগে জিজ্ঞাসা করা হয়।",
    "ফর্ম এখন কিবোর্ডের ওপরে থাকে, আর লেখার আকার বাড়িয়ে অনেক বড় করা যায়।"
   ]
  }
