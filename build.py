@@ -26,7 +26,7 @@ assert len(_phone) == 1, f"the phone screenshots differ in size: {_phone}"
 assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 2, "update the aspect-ratio of .shot img and .stage in assets/style.css to the screenshots' size"
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
-TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos"}
+TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos", "learn": "t-learn"}
 e = html.escape
 
 

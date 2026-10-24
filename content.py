@@ -30,7 +30,7 @@ BN = {
     "screens_note": "ছবির মেসেজ ও তথ্য বানানো উদাহরণ। এখানে কারো আসল তথ্য নেই।",
     "screens": [
         ("home", "সবকিছু এক জায়গায়", "বড় ছবির বোতামে মেসেজ ও নম্বর যাচাই, হটলাইন আর পরিবার সুরক্ষা। পড়তে হয় কম, বুঝতে সহজ।",
-         "সতর্ক অ্যাপের হোম স্ক্রিন: মেসেজ যাচাই, নম্বর যাচাই, পরিবার সুরক্ষা ও হটলাইনের বড় ছবির বোতাম, নিচে লাল রঙে \"আমি প্রতারিত হয়েছি\"।"),
+         "সতর্ক অ্যাপের হোম স্ক্রিন: মেসেজ যাচাই, নম্বর যাচাই, পরিবার সুরক্ষা ও হটলাইনের বড় ছবির বোতাম, তার নিচে \"জানুন ও প্রশ্নোত্তর\" আর লাল রঙে \"আমি প্রতারিত হয়েছি\"।"),
         ("scammed", "প্রতারিত হলে করণীয়", "এখনই কী করবেন তার ধাপ আর হটলাইনে এক ট্যাপে ফোন। নিচে থানা ও সেবাদাতার অভিযোগের খসড়া।",
          "প্রতারিত হলে করণীয়ের পাঁচটি ধাপ এবং বিকাশ, নগদ, রকেট, উপায়, বাংলাদেশ ব্যাংক ও ৯৯৯-এ ফোন করার বোতাম।"),
         ("gd", "জিডির আবেদন, নিজে থেকে পূর্ণ", "আপনার তথ্য লিখলেই আবেদন পূর্ণ হয়ে যায়, এক পাতায় প্রিন্ট বা PDF করা যায়। যা লেখেননি, সেখানে হাতে লেখার জন্য লাইন টানা থাকে।",
@@ -59,6 +59,7 @@ BN = {
         ("family", "পরিবার সুরক্ষা", "বাবা-মা কোনো বিপজ্জনক মেসেজ যাচাই করলে আপনি জানতে পারবেন। দুজনের সম্মতিতে, আর যেকোনো সময় বিরতি বা বন্ধ করা যায়।"),
         ("sos", "আমি প্রতারিত হয়েছি", "এখনই কী করবেন তার ধাপ আর হটলাইনে এক ট্যাপে ফোন। আপনার নাম, পিতার নাম ও ঠিকানা একবার লিখলেই থানার জিডির আবেদন নিজে থেকে পূর্ণ হয়ে যায়, এক পাতায় প্রিন্ট বা PDF করা যায়। সেবাদাতার কাছে অভিযোগের খসড়া আর পুলিশের অফিসিয়াল অনলাইন জিডি ফর্মে বসানোর বিবরণও পাবেন।"),
         ("hotline", "হটলাইন", "বিকাশ ১৬২৪৭, নগদ ১৬১৬৭, রকেট ১৬২১৬, উপায় ১৬২৬৮, বাংলাদেশ ব্যাংক ১৬২৩৬, জাতীয় জরুরি সেবা ৯৯৯, এক ট্যাপে।"),
+        ("learn", "জানুন ও প্রশ্নোত্তর", "অ্যাপের ভেতরেই পাঁচটি সোনালি নিয়ম, চেনা প্রতারণার গাইড আর সাধারণ প্রশ্নের উত্তর। ইন্টারনেট ছাড়াই পড়া যায়।"),
     ],
     "also": ["পুরোপুরি বাংলায়, ইংরেজিতেও চলে", "ইন্টারনেট ছাড়াই মেসেজ যাচাই", "জিডির আবেদন প্রিন্ট বা PDF করা যায়", "ফোনে বড় লেখার ব্যবস্থা", "ফোনের পিন বা প্যাটার্ন দিয়ে অ্যাপ লক", "অন্ধকার (ডার্ক) মোড"],
     "scams_title": "চেনা প্রতারণা, আর কী করবেন",
@@ -129,7 +130,7 @@ EN = {
     "screens_note": "The message and details in the pictures are made-up examples. They show nobody's real information.",
     "screens": [
         ("home", "Everything in one place", "Big picture buttons for checking a message or a number, the hotlines and the family guardian. Little to read, easy to follow.",
-         "The Sotorko home screen: big picture buttons for Check a message, Check a number, Family guardian and Hotlines, and a red \"I've been scammed\" button below."),
+         "The Sotorko home screen: big picture buttons for Check a message, Check a number, Family guardian and Hotlines, then a \"Learn and FAQ\" button and a red \"I've been scammed\" button below."),
         ("scammed", "What to do if you were scammed", "The steps to take right now and one-tap calls to the hotlines. Below them, drafts for the police and your service provider.",
          "Five steps to take after being scammed, and buttons to call bKash, Nagad, Rocket, Upay, Bangladesh Bank and 999."),
         ("gd", "The GD application, filled in", "Type your details and the application fills itself in, ready to print or save as a PDF on one page. Anything you leave out becomes a line to write on by hand.",
@@ -158,6 +159,7 @@ EN = {
         ("family", "Family guardian", "Know when your parents check a dangerous message. Both sides agree first, and either can pause or stop it at any time."),
         ("sos", "I've been scammed", "The steps to take right now and one-tap calls to the hotlines. Type your name, father's name and address once and the police GD application fills itself in, ready to print or save as a PDF on one page. You also get a complaint to your service provider and details ready to paste into the police's official Online GD form."),
         ("hotline", "Hotlines", "bKash 16247, Nagad 16167, Rocket 16216, Upay 16268, Bangladesh Bank 16236 and national emergency 999, one tap away."),
+        ("learn", "Learn and FAQ", "Five golden rules, a guide to common scams and answers to common questions, inside the app. It works without internet."),
     ],
     "also": ["Fully in Bangla, and in English too", "Message checks work without internet", "Print the GD application or save it as a PDF", "Adjustable text size", "App lock with your phone's PIN or pattern", "Dark mode"],
     "scams_title": "Common scams, and what to do",

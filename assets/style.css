@@ -18,6 +18,7 @@
   --t-blue: #e3ecf8;
   --t-amber: #fdf1d6;
   --t-purple: #ece6f5;
+  --t-teal: #ddf1f3;
   --t-red: #fde3e0;
   --link: #0b6e4f;
   --radius: 22px;
@@ -34,6 +35,7 @@
     --t-blue: #1b2a40;
     --t-amber: #3f3213;
     --t-purple: #2e2542;
+    --t-teal: #12353a;
     --t-red: #4a1e1b;
     --link: #7dd6b0;
   }
@@ -135,12 +137,11 @@ section { padding: 3.2rem 0; }
 @media (min-width: 900px) {
   .cards { grid-template-columns: repeat(6, 1fr); }
   .card { grid-column: span 2; }
-  .card:nth-child(n + 4) { grid-column: span 3; }
 }
 .card h3 { margin: .5rem 0 .2rem; }
 .card p { margin: 0; }
 .t-message { background: var(--t-green); } .t-number { background: var(--t-blue); } .t-family { background: var(--t-amber); }
-.t-hotline { background: var(--t-purple); } .t-sos { background: var(--t-red); }
+.t-hotline { background: var(--t-purple); } .t-sos { background: var(--t-red); } .t-learn { background: var(--t-teal); }
 .also { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 0; }
 .also li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .3rem 1rem; font-size: .95rem; }
 .scam-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
