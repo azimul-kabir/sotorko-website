@@ -281,7 +281,8 @@ def render_404():
 def write(rel, text):
     path = ROOT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
     print("wrote", rel)
 
 
