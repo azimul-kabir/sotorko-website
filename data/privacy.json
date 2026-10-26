@@ -26,7 +26,7 @@
       "ul",
       [
        "আপনি যে মেসেজ পেস্ট, শেয়ার বা সিলেক্ট করেন এবং যে প্রেরক লেখেন, তা ফোনেই যাচাই হয় এবং শুধু পর্দায় থাকে। আমরা তা জমা রাখি না।",
-       "\"আমি প্রতারিত হয়েছি\"-র অভিযোগের খসড়া ফোনেই তৈরি হয়, আপনি যা লেখেন (যেমন আপনার নাম, পিতার নাম ও ঠিকানা) তা থেকে। অ্যাপ বন্ধ করলে তা জমা থাকে না, আর আপনি কপি, শেয়ার বা প্রিন্ট করলে তবেই তা অন্য কোথাও যায়।",
+       "\"আমি প্রতারিত হয়েছি\" ও জিডির খসড়া ফোনেই তৈরি হয়, আপনি যা লেখেন (যেমন আপনার নাম, পিতা-মাতার নাম, জাতীয় পরিচয়পত্র নম্বর ও ঠিকানা) তা থেকে। অ্যাপ বন্ধ করলে তা জমা থাকে না, আর আপনি কপি, শেয়ার বা প্রিন্ট করলে তবেই তা অন্য কোথাও যায়।",
        "কিছু সেটিং ফোনে জমা থাকে: ভাষা, লেখার আকার, অ্যাপ লক চালু কি না, এই ফোন অভিভাবকের কি না এবং শেষ যে সতর্কবার্তা দেখেছেন তার সময়।",
        "ইন্টারনেট সুবিধা ব্যবহার করলে অ্যাপ ফোনে একটি ছোট ক্যাশও রাখে (আপনার নামহীন সাইন-ইন ও সম্প্রতি দেখা তথ্য)।",
        "অ্যাপের ডেটা মুছলে বা অ্যাপ আনইনস্টল করলে এসব মুছে যায়।"
@@ -202,7 +202,7 @@
       "ul",
       [
        "Messages you paste, share or select, and any sender you type, are checked on your phone and kept only on the screen. We do not store them.",
-       "The complaint draft in \"I've been scammed\" is built on your phone from what you type there (for example your name, your father's name and your addresses). It is not saved after you close the app, and it goes only where you copy, share or print it.",
+       "The complaint and GD draft in \"I've been scammed\" is built on your phone from what you type there (for example your name, parents' names, national ID number and addresses). It is not saved after you close the app, and it goes only where you copy, share or print it.",
        "Settings are saved on your phone: language, text size, whether app lock is on, whether this phone is a guardian, and the time of the last alert you saw.",
        "If you use an internet feature, the app also keeps a small cache on your phone (your anonymous sign-in and recently loaded items).",
        "Clearing the app's data or uninstalling removes all of this."
