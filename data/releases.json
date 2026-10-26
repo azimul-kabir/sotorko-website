@@ -1,5 +1,19 @@
 [
  {
+  "version": "0.4.0",
+  "date": "2026-10-26",
+  "en": [
+   "Family guardian: a guardian now hears about a dangerous message usually within seconds, even when the app is closed.",
+   "The notification never contains the message text; it is read only inside the app.",
+   "If a phone blocks background messages (a battery saver, for example), the older checks still bring the news, but it can take 15 minutes or longer."
+  ],
+  "bn": [
+   "পরিবার সুরক্ষা: অভিভাবক এখন বিপজ্জনক মেসেজের খবর সাধারণত কয়েক সেকেন্ডের মধ্যেই পান, অ্যাপ বন্ধ থাকলেও।",
+   "নোটিফিকেশনে মেসেজের লেখা থাকে না; লেখা শুধু অ্যাপের ভেতরে দেখা যায়।",
+   "ফোন ব্যাকগ্রাউন্ডের বার্তা আটকে দিলে (যেমন ব্যাটারি সেভার), আগের মতো পরীক্ষা খবর পৌঁছে দেয়, তবে ১৫ মিনিট বা তার বেশি লাগতে পারে।"
+  ]
+ },
+ {
   "version": "0.3.0",
   "date": "2026-10-26",
   "en": [

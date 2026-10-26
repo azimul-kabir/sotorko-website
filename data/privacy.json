@@ -54,7 +54,7 @@
        "অভিভাবক এমন একটি নাম লেখেন যা পরিবারের সদস্য দেখবেন, আর অ্যাপ একটি কোড বানায় যা ১৫ মিনিট কাজ করে এবং একবারই ব্যবহার করা যায়।",
        "পরিবারের সদস্য কোড দিলে যুক্ত হওয়ার আগে একটি সম্মতির পর্দা দেখেন। তারপর আমরা একটি সংযোগ জমা রাখি: দুজনের নামহীন আইডি, লেখা দুটি নাম, এবং সতর্কবার্তা বিরতিতে আছে কি না।",
        "যুক্ত পরিবারের সদস্য কোনো মেসেজ যাচাই করলে এবং অ্যাপ প্রতারণার স্পষ্ট লক্ষণ (লাল \"বিপদ\" ফল) পেলে অ্যাপ তার অভিভাবককে পাঠায়: ওই মেসেজের লেখা (সর্বোচ্চ ২০০০ অক্ষর), পাওয়া লক্ষণগুলোর নাম এবং সময়। অন্য ফলের জন্য, যাচাই না করা মেসেজের জন্য বা বিরতির সময় কিছুই পাঠানো হয় না।",
-       "অভিভাবক সতর্কবার্তা অ্যাপের ভেতরে দেখেন। তার ফোনে একটি নোটিফিকেশনও আসে, যাতে মেসেজের লেখা থাকে না।",
+       "অভিভাবক সতর্কবার্তা অ্যাপের ভেতরে দেখেন। তার ফোনে সাথে সাথে পৌঁছাতে আমরা Google-এর Firebase Cloud Messaging দিয়ে একটি পুশ নোটিফিকেশনও পাঠাই। এতে থাকে সতর্কবার্তার সময়, পাওয়া রেড ফ্ল্যাগের নাম আর সুরক্ষিত ব্যক্তির লেখা নাম, কিন্তু মেসেজের লেখা কখনো থাকে না। এর জন্য অভিভাবকের ফোন একটি পুশ টোকেন (Google ফোনকে যে এলোমেলো কোড দেয়, যাতে বার্তা ফোনে পৌঁছায়) তার নামহীন আইডির পাশে জমা রাখে।",
        "যে কেউ যেকোনো সময় সংযোগ সরিয়ে দিতে পারেন, আর সুরক্ষিত ব্যক্তি সতর্কবার্তা বিরতিতে রাখতে পারেন। অভিভাবক যেকোনো সতর্কবার্তা মুছে দিতে পারেন। সতর্কবার্তা পাঠানোর প্রায় ৩০ দিন পর নিজে থেকে মুছে যায়।",
        "মেসেজে আপনার বা অন্যদের ব্যক্তিগত তথ্য থাকতে পারে, যেমন নাম, টাকার অঙ্ক বা কোড। শুধু বিশ্বস্ত অভিভাবকের সাথে যুক্ত হোন।"
       ]
@@ -81,7 +81,7 @@
      [
       "p",
       [
-       "এই দুটি সুবিধা চালাতে আমরা Google Firebase (Authentication ও Cloud Firestore) ব্যবহার করি। তথ্য ভারতের মুম্বাইয়ে Google-এর ডেটা সেন্টারে জমা থাকে এবং এনক্রিপ্টেড সংযোগে যাতায়াত করে। সেবা চালানোর অংশ হিসেবে Google অনুরোধের কিছু প্রযুক্তিগত তথ্য, যেমন আইপি ঠিকানা ও ডিভাইসের তথ্য, নিজেদের শর্তে প্রক্রিয়া করতে পারে: policies.google.com/privacy ও firebase.google.com/support/privacy। আমরা আর কারো সাথে তথ্য ভাগ করি না।"
+       "এই দুটি সুবিধা চালাতে আমরা Google Firebase (Authentication, Cloud Firestore, Cloud Functions ও Cloud Messaging) ব্যবহার করি। তথ্য ভারতের মুম্বাইয়ে Google-এর ডেটা সেন্টারে জমা থাকে এবং এনক্রিপ্টেড সংযোগে যাতায়াত করে। সেবা চালানোর অংশ হিসেবে Google অনুরোধের কিছু প্রযুক্তিগত তথ্য, যেমন আইপি ঠিকানা ও ডিভাইসের তথ্য, নিজেদের শর্তে প্রক্রিয়া করতে পারে: policies.google.com/privacy ও firebase.google.com/support/privacy। আমরা আর কারো সাথে তথ্য ভাগ করি না।"
       ]
      ]
     ]
@@ -95,6 +95,7 @@
        "যুক্ত হওয়ার কোড: ১৫ মিনিট, বা ব্যবহার না হওয়া পর্যন্ত।",
        "অভিভাবক ও পরিবারের সদস্যের সংযোগ: যেকোনো একজন সরিয়ে না দেওয়া পর্যন্ত।",
        "সতর্কবার্তা: প্রায় ৩০ দিন, বা তার আগে অভিভাবক মুছে দিলে তখনই।",
+       "অভিভাবকের পুশ টোকেন: ফোনটি সতর্ক ব্যবহার করা পর্যন্ত। Google জানালে যে এটি আর কাজ করে না (যেমন অ্যাপ আনইনস্টলের পর), আমরা মুছে ফেলি; চাইলে আরও আগে মুছতে বলতে পারেন।",
        "নম্বর নিয়ে অভিযোগ: যিনি অভিযোগ করেছেন তিনি প্রত্যাহার না করা পর্যন্ত, বা অনুরোধে আমরা সরিয়ে না দেওয়া পর্যন্ত।",
        "ফোনের তথ্য: অ্যাপের ডেটা না মোছা বা আনইনস্টল না করা পর্যন্ত।"
       ]
@@ -230,7 +231,7 @@
        "A guardian types a name that their family member will see, and the app makes a code that works for 15 minutes and only once.",
        "A family member enters the code and sees a consent screen before anything is linked. We then store a link: the two anonymous IDs, the two names that were typed, and whether alerts are paused.",
        "When a linked family member checks a message and the app finds strong signs of a scam (the red \"Danger\" result), the app sends their guardian: the text of that message (up to 2000 characters), the names of the red flags found, and the time. Nothing is sent for other results, for messages that are not checked, or while alerts are paused.",
-       "The guardian sees the alert inside the app. Their phone also shows a notification that does not contain the message text.",
+       "The guardian sees the alert inside the app. To reach their phone at once we also send a push notification through Google's Firebase Cloud Messaging. It holds the alert's time, the names of the red flags and the name the protected person typed, but never the message text. For this, a guardian's phone stores a push token (a random code that Google gives the phone so a message can reach it) next to the guardian's anonymous ID.",
        "Either person can remove the link at any time, and the protected person can pause alerts. A guardian can delete any alert. Alerts are deleted automatically about 30 days after they are sent, or sooner if the guardian deletes them.",
        "A message can contain private details about you or other people, such as names, amounts or codes. Only link with a guardian you trust."
       ]
@@ -257,7 +258,7 @@
      [
       "p",
       [
-       "We use Google Firebase (Authentication and Cloud Firestore) to run these two features. Data is stored in a Google data center in Mumbai, India, and travels over encrypted connections. As part of running the service, Google may process technical details of requests, such as your IP address and device information, under its own terms: policies.google.com/privacy and firebase.google.com/support/privacy. We do not share data with anyone else."
+       "We use Google Firebase (Authentication, Cloud Firestore, Cloud Functions and Cloud Messaging) to run these two features. Data is stored in a Google data center in Mumbai, India, and travels over encrypted connections. As part of running the service, Google may process technical details of requests, such as your IP address and device information, under its own terms: policies.google.com/privacy and firebase.google.com/support/privacy. We do not share data with anyone else."
       ]
      ]
     ]
@@ -271,6 +272,7 @@
        "Pairing codes: 15 minutes, or until used.",
        "Links between a guardian and a family member: until either person removes them.",
        "Alerts: about 30 days, or until the guardian deletes them sooner.",
+       "A guardian's push token: while that phone uses Sotorko. We delete it when Google tells us it no longer works (for example after the app is uninstalled), and you can ask us to delete it sooner.",
        "Number reports: until the person who made the report withdraws it, or we remove it after a request.",
        "Data on your phone: until you clear the app's data or uninstall."
       ]
