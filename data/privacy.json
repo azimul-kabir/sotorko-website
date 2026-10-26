@@ -2,7 +2,7 @@
  "bn": {
   "lang": "bn",
   "title": "সতর্ক গোপনীয়তা নীতি",
-  "updated": "সর্বশেষ হালনাগাদ: ২৪ অক্টোবর ২০২৬",
+  "updated": "সর্বশেষ হালনাগাদ: ২৬ অক্টোবর ২০২৬",
   "intro": "সতর্ক (অ্যাপ) পরিচালনা করেন Azimul Kabir Apu (\"আমরা\")। আমাদের সাথে যোগাযোগ: sotorko@azimulkabir.com।",
   "sections": [
    [
@@ -26,7 +26,7 @@
       "ul",
       [
        "আপনি যে মেসেজ পেস্ট, শেয়ার বা সিলেক্ট করেন এবং যে প্রেরক লেখেন, তা ফোনেই যাচাই হয় এবং শুধু পর্দায় থাকে। আমরা তা জমা রাখি না।",
-       "\"আমি প্রতারিত হয়েছি\" ও জিডির খসড়া ফোনেই তৈরি হয়, আপনি যা লেখেন (যেমন আপনার নাম, পিতা-মাতার নাম, জাতীয় পরিচয়পত্র নম্বর ও ঠিকানা) তা থেকে। অ্যাপ বন্ধ করলে তা জমা থাকে না, আর আপনি কপি, শেয়ার বা প্রিন্ট করলে তবেই তা অন্য কোথাও যায়।",
+       "\"আমি প্রতারিত হয়েছি\" ও জিডির খসড়া ফোনেই তৈরি হয়, আপনি যা লেখেন (যেমন আপনার নাম, পিতা-মাতার নাম, জাতীয় পরিচয়পত্র নম্বর ও ঠিকানা) তা থেকে। অ্যাপ বন্ধ করলে তা জমা থাকে না, আর আপনি কপি, শেয়ার বা প্রিন্ট করলে তবেই তা অন্য কোথাও যায়। \"পরিবারকে জিজ্ঞাসা\" চাপলে মেসেজ, প্রেরক ও সতর্কের পাওয়া রেড ফ্ল্যাগ আপনার বেছে নেওয়া অ্যাপে (যেমন হোয়াটসঅ্যাপ বা এসএমএস) যায়; সতর্ক নিজে কিছু পাঠায় না।",
        "কিছু সেটিং ফোনে জমা থাকে: ভাষা, লেখার আকার, অ্যাপ লক চালু কি না, এই ফোন অভিভাবকের কি না এবং শেষ যে সতর্কবার্তা দেখেছেন তার সময়।",
        "ইন্টারনেট সুবিধা ব্যবহার করলে অ্যাপ ফোনে একটি ছোট ক্যাশও রাখে (আপনার নামহীন সাইন-ইন ও সম্প্রতি দেখা তথ্য)।",
        "অ্যাপের ডেটা মুছলে বা অ্যাপ আনইনস্টল করলে এসব মুছে যায়।"
@@ -55,7 +55,7 @@
        "পরিবারের সদস্য কোড দিলে যুক্ত হওয়ার আগে একটি সম্মতির পর্দা দেখেন। তারপর আমরা একটি সংযোগ জমা রাখি: দুজনের নামহীন আইডি, লেখা দুটি নাম, এবং সতর্কবার্তা বিরতিতে আছে কি না।",
        "যুক্ত পরিবারের সদস্য কোনো মেসেজ যাচাই করলে এবং অ্যাপ প্রতারণার স্পষ্ট লক্ষণ (লাল \"বিপদ\" ফল) পেলে অ্যাপ তার অভিভাবককে পাঠায়: ওই মেসেজের লেখা (সর্বোচ্চ ২০০০ অক্ষর), পাওয়া লক্ষণগুলোর নাম এবং সময়। অন্য ফলের জন্য, যাচাই না করা মেসেজের জন্য বা বিরতির সময় কিছুই পাঠানো হয় না।",
        "অভিভাবক সতর্কবার্তা অ্যাপের ভেতরে দেখেন। তার ফোনে একটি নোটিফিকেশনও আসে, যাতে মেসেজের লেখা থাকে না।",
-       "যে কেউ যেকোনো সময় সংযোগ সরিয়ে দিতে পারেন, আর সুরক্ষিত ব্যক্তি সতর্কবার্তা বিরতিতে রাখতে পারেন। অভিভাবক যেকোনো সতর্কবার্তা মুছে দিতে পারেন। সতর্কবার্তা অভিভাবক মুছে না দেওয়া পর্যন্ত থাকে।",
+       "যে কেউ যেকোনো সময় সংযোগ সরিয়ে দিতে পারেন, আর সুরক্ষিত ব্যক্তি সতর্কবার্তা বিরতিতে রাখতে পারেন। অভিভাবক যেকোনো সতর্কবার্তা মুছে দিতে পারেন। সতর্কবার্তা পাঠানোর প্রায় ৩০ দিন পর নিজে থেকে মুছে যায়।",
        "মেসেজে আপনার বা অন্যদের ব্যক্তিগত তথ্য থাকতে পারে, যেমন নাম, টাকার অঙ্ক বা কোড। শুধু বিশ্বস্ত অভিভাবকের সাথে যুক্ত হোন।"
       ]
      ]
@@ -94,7 +94,7 @@
       [
        "যুক্ত হওয়ার কোড: ১৫ মিনিট, বা ব্যবহার না হওয়া পর্যন্ত।",
        "অভিভাবক ও পরিবারের সদস্যের সংযোগ: যেকোনো একজন সরিয়ে না দেওয়া পর্যন্ত।",
-       "সতর্কবার্তা: অভিভাবক মুছে না দেওয়া পর্যন্ত।",
+       "সতর্কবার্তা: প্রায় ৩০ দিন, বা তার আগে অভিভাবক মুছে দিলে তখনই।",
        "নম্বর নিয়ে অভিযোগ: যিনি অভিযোগ করেছেন তিনি প্রত্যাহার না করা পর্যন্ত, বা অনুরোধে আমরা সরিয়ে না দেওয়া পর্যন্ত।",
        "ফোনের তথ্য: অ্যাপের ডেটা না মোছা বা আনইনস্টল না করা পর্যন্ত।"
       ]
@@ -178,7 +178,7 @@
  "en": {
   "lang": "en",
   "title": "Sotorko Privacy Policy",
-  "updated": "Last updated: 24 October 2026",
+  "updated": "Last updated: 26 October 2026",
   "intro": "Sotorko (the app) is run by Azimul Kabir Apu (\"we\"). You can reach us at sotorko@azimulkabir.com.",
   "sections": [
    [
@@ -202,7 +202,7 @@
       "ul",
       [
        "Messages you paste, share or select, and any sender you type, are checked on your phone and kept only on the screen. We do not store them.",
-       "The complaint and GD draft in \"I've been scammed\" is built on your phone from what you type there (for example your name, parents' names, national ID number and addresses). It is not saved after you close the app, and it goes only where you copy, share or print it.",
+       "The complaint and GD draft in \"I've been scammed\" is built on your phone from what you type there (for example your name, parents' names, national ID number and addresses). It is not saved after you close the app, and it goes only where you copy, share or print it. If you tap \"Ask my family\", the message, the sender and the red flags Sotorko found are handed to the app you choose (such as WhatsApp or SMS); Sotorko itself sends nothing.",
        "Settings are saved on your phone: language, text size, whether app lock is on, whether this phone is a guardian, and the time of the last alert you saw.",
        "If you use an internet feature, the app also keeps a small cache on your phone (your anonymous sign-in and recently loaded items).",
        "Clearing the app's data or uninstalling removes all of this."
@@ -231,7 +231,7 @@
        "A family member enters the code and sees a consent screen before anything is linked. We then store a link: the two anonymous IDs, the two names that were typed, and whether alerts are paused.",
        "When a linked family member checks a message and the app finds strong signs of a scam (the red \"Danger\" result), the app sends their guardian: the text of that message (up to 2000 characters), the names of the red flags found, and the time. Nothing is sent for other results, for messages that are not checked, or while alerts are paused.",
        "The guardian sees the alert inside the app. Their phone also shows a notification that does not contain the message text.",
-       "Either person can remove the link at any time, and the protected person can pause alerts. A guardian can delete any alert. Alerts stay until the guardian deletes them.",
+       "Either person can remove the link at any time, and the protected person can pause alerts. A guardian can delete any alert. Alerts are deleted automatically about 30 days after they are sent, or sooner if the guardian deletes them.",
        "A message can contain private details about you or other people, such as names, amounts or codes. Only link with a guardian you trust."
       ]
      ]
@@ -270,7 +270,7 @@
       [
        "Pairing codes: 15 minutes, or until used.",
        "Links between a guardian and a family member: until either person removes them.",
-       "Alerts: until the guardian deletes them.",
+       "Alerts: about 30 days, or until the guardian deletes them sooner.",
        "Number reports: until the person who made the report withdraws it, or we remove it after a request.",
        "Data on your phone: until you clear the app's data or uninstall."
       ]
