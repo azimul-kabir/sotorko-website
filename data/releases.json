@@ -1,5 +1,23 @@
 [
  {
+  "version": "0.3.0",
+  "date": "2026-10-26",
+  "en": [
+   "A fresh look for the whole app: one green colour, rounded cards and clearer forms, in light and dark mode.",
+   "A new Learn and FAQ page: five golden rules, a guide to common scams and answers to common questions, without internet.",
+   "\"Ask my family\": share a message you checked, with the red flags found, over WhatsApp, Messenger or SMS in one tap.",
+   "GD drafts for a lost phone or SIM (with a checklist of what to do first), a lost national ID or documents, and other incidents.",
+   "The printed GD letter is now easy to read, and when it needs two pages the signature part stays together."
+  ],
+  "bn": [
+   "পুরো অ্যাপের নতুন চেহারা: একই সবুজ রঙ, গোল কার্ড আর পরিষ্কার ফর্ম, দিনের আলো ও অন্ধকার দুই মোডেই।",
+   "নতুন \"জানুন ও প্রশ্নোত্তর\" পাতা: পাঁচটি সোনালি নিয়ম, চেনা প্রতারণার গাইড আর সাধারণ প্রশ্নের উত্তর, ইন্টারনেট ছাড়াই।",
+   "\"পরিবারকে জিজ্ঞাসা\": যাচাই করা মেসেজ আর পাওয়া রেড ফ্ল্যাগ এক ট্যাপে হোয়াটসঅ্যাপ, মেসেঞ্জার বা এসএমএসে পরিবারকে পাঠান।",
+   "মোবাইল বা সিম হারালে (আগে কী করতে হবে তার চেকলিস্টসহ), এনআইডি বা কাগজপত্র হারালে আর অন্য ঘটনার জন্যও জিডির আবেদনের খসড়া।",
+   "জিডির ছাপা চিঠি এখন পড়তে সহজ, আর দুই পাতা লাগলে স্বাক্ষরের অংশ এক সাথে থাকে।"
+  ]
+ },
+ {
   "version": "0.2.0",
   "date": "2026-10-24",
   "en": [
