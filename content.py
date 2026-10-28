@@ -8,6 +8,8 @@ EMAIL = "sotorko@azimulkabir.com"
 GITHUB = "https://github.com/azimul-kabir"
 DEVELOPER_SITE = "https://azimulkabir.com"
 DEVELOPER = "Azimul Kabir Apu"
+PLAY = "https://play.google.com/store/apps/details?id=com.azimulkabir.sotorko"
+TESTERS = "https://groups.google.com/g/sotorko-testers"
 
 BN = {
     "lang": "bn",
@@ -17,11 +19,18 @@ BN = {
     "skip": "মূল অংশে যান",
     "switch_label": "English",
     "switch_aria": "Read this page in English",
-    "nav": [("how", "কীভাবে কাজ করে"), ("screens", "অ্যাপের ছবি"), ("whats-new", "নতুন কী"), ("features", "কী কী পাবেন"), ("scams", "চেনা প্রতারণা"), ("privacy", "গোপনীয়তা"), ("faq", "প্রশ্নোত্তর")],
+    "nav": [("how", "কীভাবে কাজ করে"), ("get", "ডাউনলোড"), ("screens", "অ্যাপের ছবি"), ("whats-new", "নতুন কী"), ("features", "কী কী পাবেন"), ("scams", "চেনা প্রতারণা"), ("privacy", "গোপনীয়তা"), ("faq", "প্রশ্নোত্তর")],
     "hero_title": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_text": "সতর্ক আপনার ফোনেই সন্দেহজনক মেসেজ ও নম্বর যাচাই করে, প্রতারণার লক্ষণ বাংলায় বুঝিয়ে দেয় এবং শুনিয়েও দেয়। বিকাশ, নগদ বা ব্যাংকের নামে আসা ভুয়া মেসেজ চিনতে সাহায্য করে।",
-    "soon": "Google Play-তে শীঘ্রই আসছে",
-    "notify": "প্রকাশের খবর পেতে ইমেইল করুন",
+    "soon": "Google Play-তে নিন",
+    "notify": "আগে ক্লোজড টেস্টে যোগ দিন",
+    "get_title": "Google Play-তে ক্লোজড টেস্টে যোগ দিন",
+    "get_intro": "সতর্ক এখন Google Play-র ক্লোজড টেস্টিংয়ে আছে। সবার জন্য খোলা হওয়ার আগে নিচের দুই ধাপে আপনিও নিতে পারেন।",
+    "get_steps": [
+        ("টেস্টার গ্রুপে যোগ দিন", "যে Google অ্যাকাউন্ট দিয়ে আপনার ফোনে Play Store চালান, সেটি দিয়ে গ্রুপে যোগ দিন।", "গ্রুপে যোগ দিন", TESTERS),
+        ("Google Play থেকে নামান", "যোগ দেওয়ার পর ফোনে এই লিংক খুলে সতর্ক ইনস্টল করুন।", "Google Play-তে খুলুন", PLAY),
+    ],
+    "get_note": "গ্রুপে যোগ না দিলে Play-র পাতায় অ্যাপটি দেখা যাবে না। যোগ দেওয়ার পর দেখা যেতে একটু সময় লাগতে পারে।",
     "how_link": "কীভাবে কাজ করে",
     "phone_tagline": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_alt": "একটি ভুয়া জরিমানার মেসেজ যাচাইয়ের ফল: লাল \"বিপদ\" বার্তা এবং কারণগুলো: জরিমানা বা মামলার ভয় দেখিয়ে টাকা চাওয়া, সন্দেহজনক লিংক, তাড়াহুড়ো করতে বলা।",
@@ -97,7 +106,7 @@ BN = {
         ("সতর্কের জিডির আবেদন কি পুলিশের অফিসিয়াল ফরম্যাটে?", "হ্যাঁ, এটি ঢাকা মেট্রোপলিটন পুলিশ ও বাংলাদেশ পুলিশের জেনেরিক জিডি ফরম্যাট অনুসরণ করে তৈরি: তারিখ, ওসি ও থানার ঠিকানা, পিতা/স্বামী ও মাতার নাম, জাতীয় পরিচয়পত্র নম্বর, বর্তমান ও স্থায়ী ঠিকানা, ঘটনার বিবরণ ও বিনীত নিবেদক। থানাভেদে নিজস্ব মুদ্রিত ফর্ম থাকলে এটি দেখে তা সহজেই পূরণ করতে পারবেন।"),
         ("কোনো নম্বরকে কি \"প্রতারক\" বলা হচ্ছে?", "না। অন্যদের জানানো অভিযোগ শুধু \"অভিযোগ\" হিসেবে, যাচাই-না-করা দাবি হিসেবে দেখানো হয়। কারো সম্পর্কে রায় দেওয়া হয় না।"),
         ("বিকাশ বা নগদের সাথে কি সতর্কের সম্পর্ক আছে?", "না। সতর্ক একটি স্বতন্ত্র অ্যাপ। বিকাশ, নগদ ও অন্য নামগুলো তাদের নিজ নিজ মালিকের।"),
-        ("অ্যাপটি কোথায় পাব?", "Google Play-তে প্রকাশের কাজ চলছে। প্রকাশের খবর পেতে আমাদের ইমেইল করুন।"),
+        ("অ্যাপটি কোথায় পাব?", "এখন Google Play-র ক্লোজড টেস্টে আছে। টেস্টার গ্রুপে যোগ দিয়ে Google Play থেকে নামান; ধাপগুলো এই পাতার \"ডাউনলোড\" অংশে আছে।"),
         ("কে বানিয়েছেন?", f"{DEVELOPER}, একজন স্বাধীন ডেভেলপার।"),
     ],
     "footer_links": [("গোপনীয়তা নীতি", "/privacy/"), ("ডেভেলপার", DEVELOPER_SITE), ("GitHub", GITHUB)],
@@ -117,11 +126,18 @@ EN = {
     "skip": "Skip to content",
     "switch_label": "বাংলা",
     "switch_aria": "এই পাতা বাংলায় পড়ুন",
-    "nav": [("how", "How it works"), ("screens", "Screenshots"), ("whats-new", "What's new"), ("features", "What you get"), ("scams", "Common scams"), ("privacy", "Privacy"), ("faq", "FAQ")],
+    "nav": [("how", "How it works"), ("get", "Get the app"), ("screens", "Screenshots"), ("whats-new", "What's new"), ("features", "What you get"), ("scams", "Common scams"), ("privacy", "Privacy"), ("faq", "FAQ")],
     "hero_title": "Check once before you send money",
     "hero_text": "Sotorko checks suspicious messages and numbers on your own phone, explains the warning signs in plain Bangla and reads them aloud. It helps you spot fake messages sent in the name of bKash, Nagad or your bank.",
-    "soon": "Coming soon to Google Play",
-    "notify": "Email us to hear when it is out",
+    "soon": "Get it on Google Play",
+    "notify": "Join the closed test first",
+    "get_title": "Join the closed test on Google Play",
+    "get_intro": "Sotorko is in closed testing on Google Play. Before it opens to everyone, you can get it in two steps.",
+    "get_steps": [
+        ("Join the testers group", "Join the group with the Google account you use for Play Store on your phone.", "Join the group", TESTERS),
+        ("Download from Google Play", "Once you have joined, open this link on your phone and install Sotorko.", "Open on Google Play", PLAY),
+    ],
+    "get_note": "If you have not joined the group, the app will not show on its Play page. It can take a little while to appear after you join.",
     "how_link": "How it works",
     "phone_tagline": "Check once before you send money",
     "hero_alt": "The result of checking a fake traffic-fine message: a red danger notice and the reasons, a fine or legal threat with a demand to pay, a suspicious link, and pressure to hurry.",
@@ -197,7 +213,7 @@ EN = {
         ("Is the GD application in the police's official format?", "Yes, the letter follows the official generic GD format used across Dhaka Metropolitan Police and Bangladesh Police stations: date, Officer in Charge, parents' names, national ID number, present and permanent addresses, incident facts, and prayer for record. If your station has its own printed form, the draft helps you fill it in accurately."),
         ("Are numbers being called \"scammers\"?", "No. What others report is shown only as \"reports\", unverified claims. No verdict is given about anyone."),
         ("Is Sotorko connected to bKash or Nagad?", "No. Sotorko is an independent app. bKash, Nagad and other names belong to their owners."),
-        ("Where can I get the app?", "It is being prepared for Google Play. Email us to hear when it is out."),
+        ("Where can I get the app?", "It is in closed testing on Google Play now. Join the testers group, then download it from Google Play; the steps are in the \"Get the app\" section of this page."),
         ("Who makes it?", f"{DEVELOPER}, an independent developer."),
     ],
     "footer_links": [("Privacy policy", "/privacy/"), ("Developer", DEVELOPER_SITE), ("GitHub", GITHUB)],

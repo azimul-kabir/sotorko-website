@@ -85,7 +85,8 @@ p { margin: 0 0 1em; }
 .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 36rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 1.5rem 0 .6rem; align-items: center; }
 .btn { display: inline-block; text-decoration: none; font-weight: 700; padding: .75rem 1.4rem; border-radius: 999px; }
-.btn-soon { background: var(--amber); color: #3b2a00; }
+.btn-play { background: var(--amber); color: #3b2a00; }
+.btn-play:hover { filter: brightness(.95); }
 .btn-ghost { border: 2px solid var(--green); color: var(--link); }
 .btn-ghost:hover { background: var(--t-green); }
 .small { font-size: .9rem; color: var(--muted); }
@@ -132,6 +133,7 @@ section { padding: 3.2rem 0; }
 .steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; }
 .steps li::before { content: counter(step); display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--green); color: #fff; font-weight: 700; margin-bottom: .6rem; }
 .steps h3 { margin-bottom: .3em; }
+@media (min-width: 760px) { .get-steps { grid-template-columns: repeat(2, 1fr); } }
 .cards { display: grid; gap: 1rem; margin-top: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
 .card { border-radius: var(--radius); padding: 1.4rem; }
 .card img { width: 76px; height: 76px; }

@@ -14,7 +14,7 @@ import json
 import pathlib
 import re
 
-from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
+from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, PLAY, SITE
 
 ROOT = pathlib.Path(__file__).resolve().parent
 # A short fingerprint on the stylesheet link, so a changed stylesheet is fetched at once despite the day-long cache.
@@ -135,6 +135,7 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     cards = "".join(
         f'<article class="card {TILE_CLASS[k]}"><img src="{base}assets/icons/{k}.svg" alt="" width="76" height="76"><h3>{e(t)}</h3><p>{e(d)}</p></article>'
         for k, t, d in c["features"])
+    get_steps = "".join(f'<li><h3>{e(t)}</h3><p>{e(d)}</p><p><a class="btn btn-play" href="{u}">{e(l)}</a></p></li>' for t, d, l, u in c["get_steps"])
     also = "".join(f"<li>{e(x)}</li>" for x in c["also"])
     stats = "".join(f'<div class="stat"><b>{e(a)}</b>{e(b)}</div>' for a, b in c["stats"])
     scams = "".join(
@@ -160,10 +161,10 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <h1>{e(c['hero_title'])}</h1>
 <p class="lead">{e(c['hero_text'])}</p>
 <div class="actions">
-<span class="btn btn-soon">{e(c['soon'])}</span>
+<a class="btn btn-play" href="{PLAY}">{e(c['soon'])}</a>
 <a class="btn btn-ghost" href="#how">{e(c['how_link'])}</a>
 </div>
-<p class="small"><a href="mailto:{EMAIL}?subject=Sotorko">{e(c['notify'])}</a></p>
+<p class="small"><a href="{home}#get">{e(c['notify'])}</a></p>
 </div>
 {phone(c, base)}
 </div>
@@ -174,6 +175,15 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <h2 id="why">{e(c['stats_title'])}</h2>
 <div class="stats">{stats}</div>
 <p class="small">{e(c['stats_source'])}</p>
+</div>
+</section>
+
+<section id="get" aria-labelledby="get-h">
+<div class="wrap">
+<h2 id="get-h">{e(c['get_title'])}</h2>
+<p>{e(c['get_intro'])}</p>
+<ol class="steps get-steps">{get_steps}</ol>
+<p class="small">{e(c['get_note'])}</p>
 </div>
 </section>
 
