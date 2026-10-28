@@ -1,5 +1,19 @@
 [
  {
+  "version": "0.4.1",
+  "date": "2026-10-29",
+  "en": [
+   "The question about who sent a message is clearer: a scammer can use a name too, so a name alone is not proof.",
+   "Genuine bKash bank-deposit and bill-payment messages are no longer flagged by mistake.",
+   "Updated screenshots and store listing."
+  ],
+  "bn": [
+   "কে মেসেজ পাঠিয়েছে সেই প্রশ্নটি আরও পরিষ্কার: প্রতারকও নাম ব্যবহার করতে পারে, তাই শুধু নাম দেখে ভরসা নয়।",
+   "ব্যাংক থেকে জমা ও বিল পেমেন্টের আসল বিকাশ মেসেজ ভুল করে সন্দেহজনক দেখানো হবে না।",
+   "স্ক্রিনশট ও স্টোর বিবরণ হালনাগাদ।"
+  ]
+ },
+ {
   "version": "0.4.0",
   "date": "2026-10-26",
   "en": [
