@@ -1,5 +1,23 @@
 [
  {
+  "version": "0.5.0",
+  "date": "2026-11-01",
+  "en": [
+   "Choose light, dark or your phone's colours, with a high-contrast option for easier reading.",
+   "A simple home screen with larger pictures, one button under another.",
+   "Easier with a screen reader (TalkBack): clear headings, and each warning sign is read as one item.",
+   "The result now shows an icon as well as its words, so you do not have to rely on colour.",
+   "New setting to read each result aloud as soon as it opens."
+  ],
+  "bn": [
+   "হালকা, গাঢ় বা ফোনের মতো রং বেছে নিন, সঙ্গে পড়তে সুবিধার জন্য হাই কনট্রাস্ট।",
+   "সহজ হোম স্ক্রিন: বড় ছবি, একটির নিচে একটি বোতাম।",
+   "স্ক্রিন রিডারে (টকব্যাক) সহজ: পরিষ্কার শিরোনাম, আর প্রতিটি সতর্কতার লক্ষণ আলাদা করে পড়া হয়।",
+   "ফলাফলে এখন কথার সঙ্গে আইকনও দেখা যায়, তাই শুধু রঙের ওপর নির্ভর করতে হয় না।",
+   "নতুন সেটিং: ফল খুললেই সঙ্গে সঙ্গে জোরে পড়ে শোনানো।"
+  ]
+ },
+ {
   "version": "0.4.1",
   "date": "2026-10-29",
   "en": [
