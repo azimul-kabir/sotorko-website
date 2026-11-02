@@ -47,7 +47,7 @@ BN = {
         ("family", "পরিবারকে সুরক্ষা দিন", "বাবা-মা বিপজ্জনক মেসেজ যাচাই করলে আপনি জানতে পারবেন। যাঁদের সুরক্ষা দিচ্ছেন তাঁদের তালিকা পরিষ্কার, আর দুজনের সম্মতিতে যেকোনো সময় বন্ধ করা যায়।",
          "পরিবার সুরক্ষার পর্দা: কোড তৈরি করার ঘর, যাঁদের সুরক্ষা দিচ্ছেন তাঁদের কার্ড (নাম, \"চালু\" ব্যাজ, সরিয়ে দেওয়ার বোতাম) এবং কোড দিয়ে যুক্ত হওয়ার ঘর।"),
     ],
-    "tiles": {"message": "মেসেজ যাচাই", "number": "নম্বর যাচাই", "family": "পরিবার সুরক্ষা", "hotline": "হটলাইন", "sos": "আমি প্রতারিত হয়েছি"},
+    "tiles": {"message": "মেসেজ যাচাই", "number": "নম্বর যাচাই ও অভিযোগ", "family": "পরিবার সুরক্ষা", "hotline": "হটলাইন", "sos": "আমি প্রতারিত হয়েছি"},
     "stats_title": "কেন দরকার",
     "stats": [
         ("প্রায় ১০ জনে ১ জন", "মোবাইল ব্যাংকিং ব্যবহারকারী প্রতারণার শিকার হয়েছেন বলে জানিয়েছেন (৯.৩%)"),
@@ -64,7 +64,7 @@ BN = {
     "features_title": "কী কী পাবেন",
     "features": [
         ("message", "মেসেজ যাচাই", "পিন বা ওটিপি চাওয়া, \"ভুলে টাকা চলে গেছে, ফেরত দিন\", পুরস্কারের প্রলোভন, ভুয়া লিংক: পরিচিত লক্ষণগুলো আপনার ফোনেই খুঁজে বের করে। ভুয়া জরিমানা, ফি নিয়ে ঘরে বসে আয়ের ফাঁদ, কুরিয়ার ফি, পুলিশ বা ৯৯৯ পরিচয়ে চাপ আর ভাতা পেতে আগে টাকা চাওয়াও ধরে। যাচাইয়ের পর এক ট্যাপেই পুরো মেসেজ ও পাওয়া লক্ষণগুলো পরিবারকে হোয়াটসঅ্যাপ বা মেসেজে পাঠিয়ে মতামত চাওয়া যায়।"),
-        ("number", "নম্বর যাচাই", "একটি নম্বর নিয়ে অন্যরা কতবার অভিযোগ করেছেন, দেখুন। চাইলে নিজেও অভিযোগ করুন। এগুলো যাচাই-না-করা অভিযোগ, কারো সম্পর্কে রায় নয়।"),
+        ("number", "নম্বর যাচাই ও অভিযোগ", "একটি নম্বর নিয়ে কতজন অভিযোগ করেছেন ও সবচেয়ে বেশি কী বলা হয়েছে, দেখুন। মেসেজ যাচাই না করেও নিজে অভিযোগ করতে পারেন, একজন একবার। অন্তত তিনজন অভিযোগ করলে তবেই দেখানো হয়। এগুলো যাচাই-না-করা অভিযোগ, কারো সম্পর্কে রায় নয়।"),
         ("family", "পরিবার সুরক্ষা", "বাবা-মা কোনো বিপজ্জনক মেসেজ যাচাই করলে আপনি জানতে পারবেন। দুজনের সম্মতিতে, আর যেকোনো সময় বিরতি বা বন্ধ করা যায়।"),
         ("sos", "আমি প্রতারিত হয়েছি ও জিডি", "এখনই কী করবেন তার জরুরি ধাপ (মোবাইল বা সিম হারালে সিম বন্ধ ও মোবাইল ব্যাংকিং স্থগিতের চেকলিস্ট সহ) আর হটলাইনে এক ট্যাপে ফোন। বিকাশ বা নগদ প্রতারণা ছাড়াও হারানো ফোন, সিম, জাতীয় পরিচয়পত্র ও দলিলপত্রের জন্য ঢাকা মেট্রোপলিটন পুলিশ ও বাংলাদেশ পুলিশের স্ট্যান্ডার্ড ফরম্যাটে থানার জিডি আবেদন নিজে থেকে পূর্ণ হয়ে যায়, পড়ার মতো বড় লেখায় প্রিন্ট বা PDF করা যায়। সেবাদাতার অভিযোগের খসড়া আর পুলিশের অফিসিয়াল অনলাইন জিডি ফর্মে বসানোর বিবরণও পাবেন।"),
         ("hotline", "হটলাইন", "বিকাশ ১৬২৪৭, নগদ ১৬১৬৭, রকেট ১৬২১৬, উপায় ১৬২৬৮, বাংলাদেশ ব্যাংক ১৬২৩৬, জাতীয় জরুরি সেবা ৯৯৯, এক ট্যাপে।"),
@@ -154,7 +154,7 @@ EN = {
         ("family", "Protect your family", "Know when your parents check a dangerous message. See the people you protect at a glance; both sides agree first, and either can stop it at any time.",
          "The Family guardian screen: a box to create a code, a card for each person you protect (name, an On badge and a Remove button), and a box to join with a code."),
     ],
-    "tiles": {"message": "Check a message", "number": "Check a number", "family": "Family guardian", "hotline": "Hotlines", "sos": "I've been scammed"},
+    "tiles": {"message": "Check a message", "number": "Check or report a number", "family": "Family guardian", "hotline": "Hotlines", "sos": "I've been scammed"},
     "stats_title": "Why it matters",
     "stats": [
         ("About 1 in 10", "mobile money users said they had been defrauded (9.3%)"),
@@ -171,7 +171,7 @@ EN = {
     "features_title": "What you get",
     "features": [
         ("message", "Check a message", "Finds the classic warning signs on your phone: asking for your PIN or OTP, \"sent by mistake, send it back\", prize bait and fake links. It also catches fake fines, earning schemes that charge fees, courier fees, police or 999 impersonation, and benefits that ask for money first. An \"Ask my family\" button lets you share the message and the red flags straight to WhatsApp or SMS in one tap."),
-        ("number", "Check a number", "See how many people have reported a number, and report one yourself. These are unverified reports, not a verdict on anyone."),
+        ("number", "Check or report a number", "See how many people have reported a number and what they said most, or report a number yourself without checking a message (once per person). Shown only once at least three people have reported it. These are unverified reports, not a verdict on anyone."),
         ("family", "Family guardian", "Know when your parents check a dangerous message. Both sides agree first, and either can pause or stop it at any time."),
         ("sos", "I've been scammed & GDs", "Emergency steps to take right now (including a checklist to freeze your SIM and mobile wallets if your phone is lost) and one-tap hotline calls. Along with MFS fraud complaints, it drafts official Bangladesh Police GD applications for lost mobile phones (with IMEI), SIM cards, national IDs and documents, ready to print or save as a PDF, in readable type. You also get a complaint for your service provider and details ready to paste into Online GD."),
         ("hotline", "Hotlines", "bKash 16247, Nagad 16167, Rocket 16216, Upay 16268, Bangladesh Bank 16236 and national emergency 999, one tap away."),

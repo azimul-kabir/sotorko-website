@@ -1,5 +1,23 @@
 [
  {
+  "version": "0.6.0",
+  "date": "2026-11-03",
+  "en": [
+   "Report a number without checking a message: a new \"Report a number\" button on the number screen.",
+   "Each person can report a number once, and can withdraw the report later.",
+   "See how many people reported a number and the most reported reasons. Nothing is shown until at least three people have reported it.",
+   "New reasons to pick: money asked for a job, for a parcel or courier, family in trouble, and loan or fine threats.",
+   "Safer reports: only the real app from Google Play can use the report database."
+  ],
+  "bn": [
+   "মেসেজ যাচাই না করেও নম্বর নিয়ে অভিযোগ: নম্বরের পর্দায় নতুন \"নম্বর নিয়ে অভিযোগ\" বোতাম।",
+   "একজন একটি নম্বর নিয়ে একবারই অভিযোগ করতে পারেন, পরে চাইলে প্রত্যাহারও করা যায়।",
+   "কতজন অভিযোগ করেছেন ও সবচেয়ে বেশি কী বলা হয়েছে, দেখা যায়। অন্তত তিনজন অভিযোগ না করলে কিছু দেখানো হয় না।",
+   "বাছাই করার নতুন কারণ: চাকরি, পার্সেল বা কুরিয়ারের নামে টাকা চাওয়া, আপনজন বিপদে, ঋণ বা জরিমানার ভয়।",
+   "আরও নিরাপদ অভিযোগ: শুধু গুগল প্লে থেকে ইনস্টল করা আসল অ্যাপই অভিযোগের ডেটাবেস ব্যবহার করতে পারে।"
+  ]
+ },
+ {
   "version": "0.5.0",
   "date": "2026-11-01",
   "en": [
