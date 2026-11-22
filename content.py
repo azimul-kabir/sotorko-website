@@ -57,14 +57,14 @@ BN = {
     "stats_source": "সূত্র: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (জরিপ: ৭,২৭৯ জন ব্যবহারকারী, ৪৫টি জেলা, প্রকাশ আনুমানিক ২০২২)।",
     "how_title": "কীভাবে কাজ করে",
     "steps": [
-        ("মেসেজ শেয়ার বা পেস্ট করুন", "মেসেজ অ্যাপ থেকে সরাসরি সতর্কে শেয়ার করুন, অথবা লেখাটি পেস্ট করুন।"),
+        ("মেসেজ শেয়ার বা পেস্ট করুন, বা সতর্ককেই যাচাই করতে দিন", "মেসেজ অ্যাপ থেকে সরাসরি সতর্কে শেয়ার করুন, অথবা লেখাটি পেস্ট করুন। কিংবা একবার নিজে থেকে যাচাই চালু করুন, তাহলে নতুন কোনো মেসেজে বিপদের লক্ষণ থাকলে সতর্ক আপনাকে জানাবে।"),
         ("কে পাঠিয়েছে, ট্যাপ করুন", "নাম বা শর্টকোড, নাকি সাধারণ মোবাইল নম্বর, এক ট্যাপেই জানান। কিছু লিখতে হয় না।"),
         ("ফল দেখুন, শুনুন", "ঝুঁকির মাত্রা কারণসহ বাংলায় দেখুন। চাইলে অ্যাপ পড়ে শোনাবে।"),
     ],
     "features_title": "কী কী পাবেন",
     "features": [
         ("message", "মেসেজ যাচাই", "পিন বা ওটিপি চাওয়া, \"ভুলে টাকা চলে গেছে, ফেরত দিন\", পুরস্কারের প্রলোভন, ভুয়া লিংক: পরিচিত লক্ষণগুলো আপনার ফোনেই খুঁজে বের করে। ভুয়া জরিমানা, ফি নিয়ে ঘরে বসে আয়ের ফাঁদ, কুরিয়ার ফি, পুলিশ বা ৯৯৯ পরিচয়ে চাপ আর ভাতা পেতে আগে টাকা চাওয়াও ধরে। যাচাইয়ের পর এক ট্যাপেই পুরো মেসেজ ও পাওয়া লক্ষণগুলো পরিবারকে হোয়াটসঅ্যাপ বা মেসেজে পাঠিয়ে মতামত চাওয়া যায়।"),
-        ("number", "নম্বর যাচাই ও অভিযোগ", "একটি নম্বর নিয়ে কতজন অভিযোগ করেছেন ও সবচেয়ে বেশি কী বলা হয়েছে, দেখুন। মেসেজ যাচাই না করেও নিজে অভিযোগ করতে পারেন, একজন একবার। অন্তত তিনজন অভিযোগ করলে তবেই দেখানো হয়। এগুলো যাচাই-না-করা অভিযোগ, কারো সম্পর্কে রায় নয়।"),
+        ("number", "নম্বর যাচাই ও অভিযোগ", "একটি নম্বর নিয়ে কয়টি অভিযোগ জমা পড়েছে ও সবচেয়ে বেশি কী বলা হয়েছে, দেখুন। মেসেজ যাচাই না করেও নিজে অভিযোগ করতে পারেন, একটি নম্বর নিয়ে একবার। অন্তত পাঁচটি অভিযোগ জমা পড়লে তবেই দেখানো হয়। এগুলো যাচাই-না-করা অভিযোগ, কারো সম্পর্কে রায় নয়।"),
         ("family", "পরিবার সুরক্ষা", "বাবা-মা কোনো বিপজ্জনক মেসেজ যাচাই করলে আপনি জানতে পারবেন। দুজনের সম্মতিতে, আর যেকোনো সময় বিরতি বা বন্ধ করা যায়।"),
         ("sos", "আমি প্রতারিত হয়েছি ও জিডি", "এখনই কী করবেন তার জরুরি ধাপ (মোবাইল বা সিম হারালে সিম বন্ধ ও মোবাইল ব্যাংকিং স্থগিতের চেকলিস্ট সহ) আর হটলাইনে এক ট্যাপে ফোন। বিকাশ বা নগদ প্রতারণা ছাড়াও হারানো ফোন, সিম, জাতীয় পরিচয়পত্র ও দলিলপত্রের জন্য ঢাকা মেট্রোপলিটন পুলিশ ও বাংলাদেশ পুলিশের স্ট্যান্ডার্ড ফরম্যাটে থানার জিডি আবেদন নিজে থেকে পূর্ণ হয়ে যায়, পড়ার মতো বড় লেখায় প্রিন্ট বা PDF করা যায়। সেবাদাতার অভিযোগের খসড়া আর পুলিশের অফিসিয়াল অনলাইন জিডি ফর্মে বসানোর বিবরণও পাবেন।"),
         ("hotline", "হটলাইন", "বিকাশ ১৬২৪৭, নগদ ১৬১৬৭, রকেট ১৬২১৬, উপায় ১৬২৬৮, বাংলাদেশ ব্যাংক ১৬২৩৬, জাতীয় জরুরি সেবা ৯৯৯, এক ট্যাপে।"),
@@ -89,7 +89,7 @@ BN = {
     "privacy_points": [
         "মেসেজের লেখা আপনার ফোনেই যাচাই হয়।",
         "বিজ্ঞাপন নেই, ট্র্যাকিং নেই, অ্যাকাউন্ট খুলতে হয় না।",
-        "এসএমএস, কল লগ, কন্টাক্ট বা লোকেশন দেখার অনুমতি চায় না।",
+        "এসএমএস ইনবক্স, কল লগ, কন্টাক্ট বা লোকেশন দেখার অনুমতি চায় না। নিজে থেকে যাচাই চালু করলে নতুন মেসেজের নোটিফিকেশন শুধু ফোনেই পড়া হয়, কিছুই জমা থাকে না।",
         "দুটি ঐচ্ছিক সুবিধা ইন্টারনেট ব্যবহার করে (পরিবার সুরক্ষা ও নম্বরের অভিযোগ)। নম্বর পাঠানো হয় শুধু একমুখী কোড হিসেবে।",
     ],
     "privacy_link": "পুরো গোপনীয়তা নীতি পড়ুন",
@@ -97,7 +97,7 @@ BN = {
     "hotlines": [("বিকাশ", "16247"), ("নগদ", "16167"), ("রকেট", "16216"), ("উপায়", "16268"), ("বাংলাদেশ ব্যাংক", "16236"), ("জাতীয় জরুরি সেবা", "999")],
     "faq_title": "প্রশ্নোত্তর",
     "faq": [
-        ("সতর্ক কি আমার এসএমএস পড়ে?", "না। অ্যাপটি এসএমএস, কল লগ বা কন্টাক্টের অনুমতি চায় না। আপনি যে মেসেজ শেয়ার বা পেস্ট করেন, শুধু সেটিই যাচাই হয়।"),
+        ("সতর্ক কি আমার এসএমএস পড়ে?", "অ্যাপটি কখনো এসএমএস, কল লগ বা কন্টাক্টের অনুমতি চায় না। সাধারণত আপনি যে মেসেজ শেয়ার বা পেস্ট করেন, শুধু সেটিই যাচাই হয়। সেটিংসে নিজে থেকে যাচাই চালু করলে সতর্ক এসএমএস, হোয়াটসঅ্যাপ, মেসেঞ্জার, ইমো, ভাইবার ও টেলিগ্রামে আসা নতুন মেসেজের নোটিফিকেশনও পড়ে, ফোনেই যাচাই করে এবং কিছুই জমা রাখে না। বিপদের লক্ষণ পেলে তবেই জানায়।"),
         ("\"কোনো লক্ষণ পাওয়া যায়নি\" মানে কি মেসেজটি নিরাপদ?", "না। সতর্ক পরিচিত প্রতারণার ধরন খোঁজে। নতুন ধরন বা অন্যভাবে লেখা মেসেজ সে ধরতে নাও পারে। সন্দেহ হলে হটলাইনে ফোন করুন।"),
         ("সতর্ক কীভাবে জানে কোনটি প্রতারণা?", "অ্যাপের নিয়মগুলো বিকাশের সতর্কতা, সরকারের সাইবার নিরাপত্তা দল (বিজিডি ই-গভ সার্ট), পুলিশের হুঁশিয়ারি আর সংবাদে জানা প্রতারণার ধরন অনুযায়ী বানানো। যাচাই হয় আপনার ফোনেই, আপনার মেসেজ থেকে অ্যাপ কিছু শেখে না। নতুন ধরন অ্যাপ আপডেটের মাধ্যমে আসে, তাই নতুন বা অন্যভাবে লেখা প্রতারণা সে ধরতে নাও পারে।"),
         ("পরিবারের অভিভাবক কত তাড়াতাড়ি জানতে পারেন?", "সাধারণত কয়েক সেকেন্ডের মধ্যে, অ্যাপ বন্ধ থাকলেও, কারণ অভিভাবকের ফোনে একটি পুশ নোটিফিকেশন পাঠানো হয়। ফোন ব্যাকগ্রাউন্ডের বার্তা আটকে দিলে (যেমন ব্যাটারি সেভার) প্রায় ১৫ মিনিট বা তার বেশি লাগতে পারে। নোটিফিকেশনে মেসেজের লেখা থাকে না।"),
@@ -164,14 +164,14 @@ EN = {
     "stats_source": "Source: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (survey of 7,279 users in 45 districts, published around 2022).",
     "how_title": "How it works",
     "steps": [
-        ("Share or paste the message", "Share it straight from your messages app to Sotorko, or paste the text."),
+        ("Share or paste the message, or let it check for you", "Share it straight from your messages app to Sotorko, or paste the text. Or turn on automatic checks once, and Sotorko warns you when a new message has red flags."),
         ("Tap who sent it", "A name or short code, or an ordinary mobile number: one tap, nothing to type."),
         ("See the result, hear it", "See how risky it looks, with the reasons, in Bangla. The app can read it aloud."),
     ],
     "features_title": "What you get",
     "features": [
         ("message", "Check a message", "Finds the classic warning signs on your phone: asking for your PIN or OTP, \"sent by mistake, send it back\", prize bait and fake links. It also catches fake fines, earning schemes that charge fees, courier fees, police or 999 impersonation, and benefits that ask for money first. An \"Ask my family\" button lets you share the message and the red flags straight to WhatsApp or SMS in one tap."),
-        ("number", "Check or report a number", "See how many people have reported a number and what they said most, or report a number yourself without checking a message (once per person). Shown only once at least three people have reported it. These are unverified reports, not a verdict on anyone."),
+        ("number", "Check or report a number", "See how many reports there are about a number and what they said most, or report a number yourself without checking a message (once per number). Shown only once there are at least five reports about it. These are unverified reports, not a verdict on anyone."),
         ("family", "Family guardian", "Know when your parents check a dangerous message. Both sides agree first, and either can pause or stop it at any time."),
         ("sos", "I've been scammed & GDs", "Emergency steps to take right now (including a checklist to freeze your SIM and mobile wallets if your phone is lost) and one-tap hotline calls. Along with MFS fraud complaints, it drafts official Bangladesh Police GD applications for lost mobile phones (with IMEI), SIM cards, national IDs and documents, ready to print or save as a PDF, in readable type. You also get a complaint for your service provider and details ready to paste into Online GD."),
         ("hotline", "Hotlines", "bKash 16247, Nagad 16167, Rocket 16216, Upay 16268, Bangladesh Bank 16236 and national emergency 999, one tap away."),
@@ -196,7 +196,7 @@ EN = {
     "privacy_points": [
         "Message text is checked on your phone.",
         "No ads, no tracking, no account to create.",
-        "It does not ask to read your SMS, call log, contacts or location.",
+        "It does not ask to read your SMS inbox, call log, contacts or location. Automatic checks, if you turn them on, read new message notifications on your phone only and keep nothing.",
         "Two optional features use the internet (Family guardian and number reports). A number is sent only as a one-way code.",
     ],
     "privacy_link": "Read the full privacy policy",
@@ -204,7 +204,7 @@ EN = {
     "hotlines": [("bKash", "16247"), ("Nagad", "16167"), ("Rocket", "16216"), ("Upay", "16268"), ("Bangladesh Bank", "16236"), ("National emergency", "999")],
     "faq_title": "FAQ",
     "faq": [
-        ("Does Sotorko read my SMS?", "No. The app does not ask for SMS, call log or contacts permission. Only the message you share or paste is checked."),
+        ("Does Sotorko read my SMS?", "It never asks for SMS, call log or contacts permission. Normally only the message you share or paste is checked. If you turn on automatic checks in Settings, Sotorko also reads the notifications of new messages from SMS, WhatsApp, Messenger, imo, Viber and Telegram, checks them on your phone and keeps nothing. It warns you only when a message has red flags."),
         ("Does \"no warning signs found\" mean the message is safe?", "No. Sotorko looks for known scam patterns. A new kind of scam, or one worded differently, can slip past. If in doubt, call the hotline."),
         ("How does Sotorko know what a scam looks like?", "Its rules follow scam patterns described by bKash, the government's cyber security team (BGD e-GOV CIRT), the police and news reports. The checking happens on your phone, and the app learns nothing from your messages. New kinds of scams reach it only through app updates, so it can miss new or unusual ones."),
         ("How fast does my family guardian hear?", "Usually within seconds, even when the app is closed, because a push notification is sent to the guardian's phone. If a phone blocks background messages (a battery saver, for example), it can take about 15 minutes or more. The notification never contains the message text."),
