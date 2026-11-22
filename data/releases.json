@@ -1,5 +1,23 @@
 [
  {
+  "version": "0.7.0",
+  "date": "2026-11-23",
+  "en": [
+   "No more copying and pasting: turn on \"Check new messages automatically\" in Settings, and Sotorko warns you when a new SMS, WhatsApp, Messenger, imo, Viber or Telegram message has red flags.",
+   "Messages are checked on your phone. Nothing is saved or sent, and you are told only when a message has red flags.",
+   "A scam message can no longer hide by copying a line such as \"never share your PIN\".",
+   "Number reports are counted as reports, not people, and are shown only from five reports.",
+   "Family guardian says plainly when an alert could not be sent, or when the guardian has reinstalled the app."
+  ],
+  "bn": [
+   "আর কপি-পেস্ট নয়: সেটিংসে \"নতুন মেসেজ নিজে থেকে যাচাই করুন\" চালু করুন, এসএমএস, হোয়াটসঅ্যাপ, মেসেঞ্জার, ইমো, ভাইবার বা টেলিগ্রামে নতুন মেসেজে বিপদের লক্ষণ থাকলে সতর্ক জানাবে।",
+   "মেসেজ আপনার ফোনেই যাচাই হয়। কিছুই জমা রাখা বা পাঠানো হয় না, আর বিপদের লক্ষণ থাকলে তবেই জানানো হয়।",
+   "\"পিন কাউকে বলবেন না\" জাতীয় লাইন জুড়ে দিয়েও প্রতারণার মেসেজ আর লুকাতে পারবে না।",
+   "নম্বরের অভিযোগ এখন মানুষ নয়, অভিযোগ হিসেবে গোনা হয়, আর অন্তত পাঁচটি অভিযোগ জমা পড়লে তবেই দেখানো হয়।",
+   "সতর্কবার্তা পাঠানো না গেলে, বা অভিভাবক অ্যাপ আবার ইনস্টল করলে, পরিবার সুরক্ষা তা পরিষ্কার জানায়।"
+  ]
+ },
+ {
   "version": "0.6.0",
   "date": "2026-11-03",
   "en": [
