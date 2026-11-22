@@ -2,7 +2,7 @@
  "bn": {
   "lang": "bn",
   "title": "সতর্ক গোপনীয়তা নীতি",
-  "updated": "সর্বশেষ হালনাগাদ: ২৬ অক্টোবর ২০২৬",
+  "updated": "সর্বশেষ হালনাগাদ: ২৩ নভেম্বর ২০২৬",
   "intro": "সতর্ক (অ্যাপ) পরিচালনা করেন Azimul Kabir Apu (\"আমরা\")। আমাদের সাথে যোগাযোগ: sotorko@azimulkabir.com।",
   "sections": [
    [
@@ -13,7 +13,7 @@
       [
        "সতর্ক আপনার ফোনেই মেসেজ যাচাই করে। আপনি যে মেসেজ যাচাই করেন, তার লেখা কোথাও পাঠানো হয় না, শুধু \"পরিবার সুরক্ষা\" ব্যবহার করলে পাঠানো হয় (ধারা ৪)।",
        "কোনো বিজ্ঞাপন, অ্যানালিটিক্স, ট্র্যাকিং বা অ্যাকাউন্ট নেই। আমরা কখনো তথ্য বিক্রি করি না।",
-       "সতর্ক আপনার এসএমএস, কল লগ, কন্টাক্ট, লোকেশন, ক্যামেরা বা মাইক্রোফোন দেখতে পারে না।",
+       "সতর্ক আপনার এসএমএস ইনবক্স, কল লগ, কন্টাক্ট, লোকেশন, ক্যামেরা বা মাইক্রোফোন দেখতে পারে না। \"নিজে থেকে যাচাই\" চালু করলে সতর্ক নতুন মেসেজের নোটিফিকেশন পড়ে, শুধু আপনার ফোনেই (ধারা ২)।",
        "শুধু দুটি ঐচ্ছিক সুবিধা ইন্টারনেট ব্যবহার করে: পরিবার সুরক্ষা এবং নম্বর নিয়ে অভিযোগ।"
       ]
      ]
@@ -26,8 +26,9 @@
       "ul",
       [
        "আপনি যে মেসেজ পেস্ট, শেয়ার বা সিলেক্ট করেন এবং যে প্রেরক লেখেন, তা ফোনেই যাচাই হয় এবং শুধু পর্দায় থাকে। আমরা তা জমা রাখি না।",
+       "নিজে থেকে যাচাই (আপনি চালু না করলে বন্ধ থাকে): অ্যান্ড্রয়েডের সেটিংসে আপনি নোটিফিকেশন পড়ার অনুমতি দিলে সতর্ক এসএমএস, হোয়াটসঅ্যাপ, মেসেঞ্জার, ইমো, ভাইবার ও টেলিগ্রামে আসা নতুন মেসেজের নোটিফিকেশন দেখে; অন্য কোনো অ্যাপের নোটিফিকেশন দেখে না। প্রতিটি নোটিফিকেশনে দেখানো লেখা, আর নোটিফিকেশনে প্রেরকের নম্বর থাকলে সেটিও, ফোনেই যাচাই হয়। এগুলো জমা রাখা হয় না, কোথাও পাঠানো হয় না। বিপদের লক্ষণ পেলে সতর্ক আপনাকে একটি সতর্কবার্তা দেখায়, যাতে লেখাটি থাকে শুধু আপনি সেটি খোলা বা সরিয়ে দেওয়া পর্যন্ত; খুললে সাধারণ ফলাফল দেখায়, ঠিক নিজে মেসেজ যাচাই করার মতো।",
        "\"আমি প্রতারিত হয়েছি\" ও জিডির খসড়া ফোনেই তৈরি হয়, আপনি যা লেখেন (যেমন আপনার নাম, পিতা-মাতার নাম, জাতীয় পরিচয়পত্র নম্বর ও ঠিকানা) তা থেকে। অ্যাপ বন্ধ করলে তা জমা থাকে না, আর আপনি কপি, শেয়ার বা প্রিন্ট করলে তবেই তা অন্য কোথাও যায়। \"পরিবারকে জিজ্ঞাসা\" চাপলে মেসেজ, প্রেরক ও সতর্কের পাওয়া রেড ফ্ল্যাগ আপনার বেছে নেওয়া অ্যাপে (যেমন হোয়াটসঅ্যাপ বা এসএমএস) যায়; সতর্ক নিজে কিছু পাঠায় না।",
-       "কিছু সেটিং ফোনে জমা থাকে: ভাষা, লেখার আকার, রঙের মোড, হাই কনট্রাস্ট, সহজ হোম স্ক্রিন, ফল জোরে পড়া চালু কি না, অ্যাপ লক চালু কি না, এই ফোন অভিভাবকের কি না এবং শেষ যে সতর্কবার্তা দেখেছেন তার সময়।",
+       "কিছু সেটিং ফোনে জমা থাকে: ভাষা, লেখার আকার, রঙের মোড, হাই কনট্রাস্ট, সহজ হোম স্ক্রিন, ফল জোরে পড়া চালু কি না, নিজে থেকে যাচাই চালু কি না, অ্যাপ লক চালু কি না, এই ফোন অভিভাবকের কি না এবং শেষ যে সতর্কবার্তা দেখেছেন তার সময়।",
        "ইন্টারনেট সুবিধা ব্যবহার করলে অ্যাপ ফোনে একটি ছোট ক্যাশও রাখে (আপনার নামহীন সাইন-ইন ও সম্প্রতি দেখা তথ্য)।",
        "অ্যাপের ডেটা মুছলে বা অ্যাপ আনইনস্টল করলে এসব মুছে যায়।"
       ]
@@ -52,8 +53,8 @@
       "ul",
       [
        "অভিভাবক এমন একটি নাম লেখেন যা পরিবারের সদস্য দেখবেন, আর অ্যাপ একটি কোড বানায় যা ১৫ মিনিট কাজ করে এবং একবারই ব্যবহার করা যায়।",
-       "পরিবারের সদস্য কোড দিলে যুক্ত হওয়ার আগে একটি সম্মতির পর্দা দেখেন। তারপর আমরা একটি সংযোগ জমা রাখি: দুজনের নামহীন আইডি, লেখা দুটি নাম, এবং সতর্কবার্তা বিরতিতে আছে কি না।",
-       "যুক্ত পরিবারের সদস্য কোনো মেসেজ যাচাই করলে এবং অ্যাপ প্রতারণার স্পষ্ট লক্ষণ (লাল \"বিপদ\" ফল) পেলে অ্যাপ তার অভিভাবককে পাঠায়: ওই মেসেজের লেখা (সর্বোচ্চ ২০০০ অক্ষর), পাওয়া লক্ষণগুলোর নাম এবং সময়। অন্য ফলের জন্য, যাচাই না করা মেসেজের জন্য বা বিরতির সময় কিছুই পাঠানো হয় না।",
+       "পরিবারের সদস্য কোড দিলে যুক্ত হওয়ার আগে একটি সম্মতির পর্দা দেখেন। তারপর আমরা একটি সংযোগ জমা রাখি: দুজনের নামহীন আইডি, লেখা দুটি নাম, সতর্কবার্তা বিরতিতে আছে কি না, এবং অভিভাবকের ফোনে পৌঁছানো গেছে কি না (অভিভাবক অ্যাপ আবার ইনস্টল করলে বা ফোন বদলালে পুশ থেকে তা বোঝা গেলে আমাদের সার্ভার এটি লিখে রাখে)।",
+       "যুক্ত পরিবারের সদস্য কোনো মেসেজ যাচাই করলে (বা নিজে থেকে যাচাইয়ের সতর্কবার্তা খুললে) এবং অ্যাপ প্রতারণার স্পষ্ট লক্ষণ (লাল \"বিপদ\" ফল) পেলে অ্যাপ তার অভিভাবককে পাঠায়: ওই মেসেজের লেখা (সর্বোচ্চ ২০০০ অক্ষর), পাওয়া লক্ষণগুলোর নাম এবং সময়। অন্য ফলের জন্য, যাচাই না করা মেসেজের জন্য, না খোলা সতর্কবার্তার জন্য বা বিরতির সময় কিছুই পাঠানো হয় না।",
        "অভিভাবক সতর্কবার্তা অ্যাপের ভেতরে দেখেন। তার ফোনে সাথে সাথে পৌঁছাতে আমরা Google-এর Firebase Cloud Messaging দিয়ে একটি পুশ নোটিফিকেশনও পাঠাই। এতে থাকে সতর্কবার্তার সময়, পাওয়া রেড ফ্ল্যাগের নাম আর সুরক্ষিত ব্যক্তির লেখা নাম, কিন্তু মেসেজের লেখা কখনো থাকে না। এর জন্য অভিভাবকের ফোন একটি পুশ টোকেন (Google ফোনকে যে এলোমেলো কোড দেয়, যাতে বার্তা ফোনে পৌঁছায়) তার নামহীন আইডির পাশে জমা রাখে।",
        "যে কেউ যেকোনো সময় সংযোগ সরিয়ে দিতে পারেন, আর সুরক্ষিত ব্যক্তি সতর্কবার্তা বিরতিতে রাখতে পারেন। অভিভাবক যেকোনো সতর্কবার্তা মুছে দিতে পারেন। সতর্কবার্তা পাঠানোর প্রায় ৩০ দিন পর নিজে থেকে মুছে যায়।",
        "মেসেজে আপনার বা অন্যদের ব্যক্তিগত তথ্য থাকতে পারে, যেমন নাম, টাকার অঙ্ক বা কোড। শুধু বিশ্বস্ত অভিভাবকের সাথে যুক্ত হোন।"
@@ -69,7 +70,7 @@
       [
        "প্রেরকের নম্বর লিখে যাচাই করলে অ্যাপ নম্বরটিকে একটি একমুখী কোডে (SHA-256 হ্যাশ) রূপান্তর করে এবং সার্ভারের কাছ থেকে ওই কোডের অভিযোগের সারসংক্ষেপ নেয়। নম্বরটি নিজে পাঠানো হয় না। তবে হ্যাশ গোপন নয়: যার কাছে আগে থেকে নম্বর আছে, সে তার কোড বের করে নিতে পারে।",
        "আপনি কোনো নম্বর নিয়ে অভিযোগ করলে আমরা তার কোড, আপনার বাছাই করা ধরন (যেমন \"পিন বা ওটিপি চেয়েছে\"), সময় এবং আপনার নামহীন আইডি জমা রাখি। একটি নম্বর নিয়ে একবারই অভিযোগ করা যায় এবং অ্যাপে যেকোনো সময় তা প্রত্যাহার করা যায়।",
-       "মেসেজ যাচাই না করেও নম্বর পর্দা থেকে সরাসরি কোনো নম্বর নিয়ে অভিযোগ করা যায়। অন্তত তিনজন আলাদা মানুষ একই নম্বর নিয়ে অভিযোগ করলে তবেই অ্যাপ দেখায় কতজন অভিযোগ করেছেন ও কোন ধরনের অভিযোগ সবচেয়ে বেশি; তার কম হলে কিছুই দেখানো হয় না।",
+       "মেসেজ যাচাই না করেও নম্বর পর্দা থেকে সরাসরি কোনো নম্বর নিয়ে অভিযোগ করা যায়। একই নম্বর নিয়ে অন্তত পাঁচটি অভিযোগ জমা পড়লে তবেই অ্যাপ দেখায় কয়টি অভিযোগ জমা পড়েছে ও কোন ধরনের অভিযোগ সবচেয়ে বেশি; তার কম হলে কিছুই দেখানো হয় না। একটি অভিযোগ অ্যাপের একটি ইনস্টল থেকে আসে, তাই সংখ্যাটি অভিযোগের, মানুষের নয়; আর অভিযোগগুলো যাচাই-না-করা দাবি।",
        "অনুরোধ যে গুগল প্লে থেকে ইনস্টল করা আসল অ্যাপ থেকেই আসছে তা নিশ্চিত করতে অ্যাপ Firebase App Check (গুগল প্লে ইন্টিগ্রিটি) ব্যবহার করে। গুগল অ্যাপ ও ডিভাইস যাচাই করে একটি স্বল্পমেয়াদি টোকেন দেয়, যা প্রতিটি অনুরোধের সাথে আমাদের ডেটাবেসে যায়। এর থেকে আপনার গুগল অ্যাকাউন্ট বা আপনার সম্পর্কে অন্য কোনো তথ্য আমরা পাই না।",
        "অভিযোগ হলো নামহীন মানুষের যাচাই-না-করা দাবি, প্রমাণিত তথ্য নয়। আপনার নম্বর নিয়ে অভিযোগ হয়ে থাকলে এবং আপনি তা ভুল মনে করলে আমাদের লিখুন; আমরা দেখে প্রয়োজনে অভিযোগ সরিয়ে দেব।",
        "কোনো নম্বর খোঁজা না চাইলে প্রেরকের ঘরটি ফাঁকা রাখুন।"
@@ -94,7 +95,7 @@
      [
       "ul",
       [
-       "যুক্ত হওয়ার কোড: ১৫ মিনিট, বা ব্যবহার না হওয়া পর্যন্ত।",
+       "যুক্ত হওয়ার কোড: ১৫ মিনিট পর আর কাজ করে না। ব্যবহার হলেই কোডটি মুছে যায়; যে কোড কখনো ব্যবহার হয়নি, তা মেয়াদ শেষের প্রায় একদিন পরে নিজে থেকে মুছে যায়।",
        "অভিভাবক ও পরিবারের সদস্যের সংযোগ: যেকোনো একজন সরিয়ে না দেওয়া পর্যন্ত।",
        "সতর্কবার্তা: প্রায় ৩০ দিন, বা তার আগে অভিভাবক মুছে দিলে তখনই।",
        "অভিভাবকের পুশ টোকেন: ফোনটি সতর্ক ব্যবহার করা পর্যন্ত। Google জানালে যে এটি আর কাজ করে না (যেমন অ্যাপ আনইনস্টলের পর), আমরা মুছে ফেলি; চাইলে আরও আগে মুছতে বলতে পারেন।",
@@ -125,7 +126,8 @@
       "ul",
       [
        "ইন্টারনেট ও নেটওয়ার্কের অবস্থা: দুটি ঐচ্ছিক সুবিধার জন্য Google Firebase-এ যেতে।",
-       "নোটিফিকেশন: অভিভাবককে সতর্কবার্তার খবর দিতে। কেউ অভিভাবক হলে তখনই শুধু অ্যাপ অনুমতি চায়।",
+       "নোটিফিকেশন: অভিভাবককে সতর্কবার্তার খবর দিতে, আর নিজে থেকে যাচাই চালু থাকলে কোনো মেসেজ নিয়ে আপনাকে সাবধান করতে। কেউ অভিভাবক হলে বা নিজে থেকে যাচাই চালু করলে তখনই শুধু অ্যাপ অনুমতি চায়।",
+       "নোটিফিকেশন পড়ার অনুমতি (শুধু নিজে থেকে যাচাই চালু করলে): ধারা ২-এ লেখা মেসেজিং অ্যাপগুলোর নতুন মেসেজের নোটিফিকেশন ফোনেই পড়তে। এটি আপনি অ্যান্ড্রয়েডের সেটিংসে দেন, আর যেকোনো সময় সেখান থেকে ফিরিয়ে নিতে বা সতর্কে নিজে থেকে যাচাই বন্ধ করতে পারেন।",
        "ফোন চালু হওয়ার খবর: যাতে ফোন রিস্টার্টের পরও অভিভাবকের ফোন সতর্কবার্তা খুঁজতে থাকে।",
        "আমরা এসএমএস, কল লগ, কন্টাক্ট, লোকেশন, ক্যামেরা বা মাইক্রোফোনের অনুমতি চাই না।"
       ]
@@ -181,7 +183,7 @@
  "en": {
   "lang": "en",
   "title": "Sotorko Privacy Policy",
-  "updated": "Last updated: 26 October 2026",
+  "updated": "Last updated: 23 November 2026",
   "intro": "Sotorko (the app) is run by Azimul Kabir Apu (\"we\"). You can reach us at sotorko@azimulkabir.com.",
   "sections": [
    [
@@ -192,7 +194,7 @@
       [
        "Sotorko checks messages on your phone. The text of a message you check is not sent anywhere, unless you chose to use Family guardian (section 4).",
        "No ads, no analytics, no tracking and no accounts. We never sell data.",
-       "Sotorko cannot read your SMS, call log, contacts, location, camera or microphone.",
+       "Sotorko cannot read your SMS inbox, call log, contacts, location, camera or microphone. If you turn on automatic checks, it reads the notifications of new messages, on your phone only (section 2).",
        "Only two optional features use the internet: Family guardian and number reports."
       ]
      ]
@@ -205,8 +207,9 @@
       "ul",
       [
        "Messages you paste, share or select, and any sender you type, are checked on your phone and kept only on the screen. We do not store them.",
+       "Automatic checks (off unless you turn them on): with the notification access you give in Android's settings, Sotorko sees the notifications of new messages from SMS, WhatsApp, Messenger, imo, Viber and Telegram, and ignores every other app's notifications. It checks the text shown in each notification, and the sender's number if the notification shows one, on your phone. It does not store them or send them anywhere. If it finds red flags it shows you a warning, which holds the text only until you open or dismiss it; opening it shows the usual result, the same as checking the message yourself.",
        "The complaint and GD draft in \"I've been scammed\" is built on your phone from what you type there (for example your name, parents' names, national ID number and addresses). It is not saved after you close the app, and it goes only where you copy, share or print it. If you tap \"Ask my family\", the message, the sender and the red flags Sotorko found are handed to the app you choose (such as WhatsApp or SMS); Sotorko itself sends nothing.",
-       "Settings are saved on your phone: language, text size, colour mode, high contrast, simple home screen, read results aloud, whether app lock is on, whether this phone is a guardian, and the time of the last alert you saw.",
+       "Settings are saved on your phone: language, text size, colour mode, high contrast, simple home screen, read results aloud, automatic checks, whether app lock is on, whether this phone is a guardian, and the time of the last alert you saw.",
        "If you use an internet feature, the app also keeps a small cache on your phone (your anonymous sign-in and recently loaded items).",
        "Clearing the app's data or uninstalling removes all of this."
       ]
@@ -231,8 +234,8 @@
       "ul",
       [
        "A guardian types a name that their family member will see, and the app makes a code that works for 15 minutes and only once.",
-       "A family member enters the code and sees a consent screen before anything is linked. We then store a link: the two anonymous IDs, the two names that were typed, and whether alerts are paused.",
-       "When a linked family member checks a message and the app finds strong signs of a scam (the red \"Danger\" result), the app sends their guardian: the text of that message (up to 2000 characters), the names of the red flags found, and the time. Nothing is sent for other results, for messages that are not checked, or while alerts are paused.",
+       "A family member enters the code and sees a consent screen before anything is linked. We then store a link: the two anonymous IDs, the two names that were typed, whether alerts are paused, and whether the guardian's phone could be reached (our server sets that when a push shows the guardian has reinstalled the app or changed phone).",
+       "When a linked family member checks a message (or opens an automatic-check warning) and the app finds strong signs of a scam (the red \"Danger\" result), the app sends their guardian: the text of that message (up to 2000 characters), the names of the red flags found, and the time. Nothing is sent for other results, for messages that are not checked, for warnings that are not opened, or while alerts are paused.",
        "The guardian sees the alert inside the app. To reach their phone at once we also send a push notification through Google's Firebase Cloud Messaging. It holds the alert's time, the names of the red flags and the name the protected person typed, but never the message text. For this, a guardian's phone stores a push token (a random code that Google gives the phone so a message can reach it) next to the guardian's anonymous ID.",
        "Either person can remove the link at any time, and the protected person can pause alerts. A guardian can delete any alert. Alerts are deleted automatically about 30 days after they are sent, or sooner if the guardian deletes them.",
        "A message can contain private details about you or other people, such as names, amounts or codes. Only link with a guardian you trust."
@@ -248,7 +251,7 @@
       [
        "When you enter a sender's number and check it, the app turns the number into a one-way code (a SHA-256 hash) and asks the server for the summary of reports under that code. The number itself is not sent. A hash is not secret, though: someone who already has a number can work out its code.",
        "When you report a number, we store its code, the type you picked (for example \"asked for my PIN or OTP\"), the time, and your anonymous ID. You can report a number once and withdraw your report at any time in the app.",
-       "You can also report a number without checking a message, from the number screen. The app shows how many people reported a number, and the most reported types, only when at least three different people have reported it; below that nothing is shown.",
+       "You can also report a number without checking a message, from the number screen. The app shows how many reports a number has, and the most reported types, only when there are at least five reports of it; below that nothing is shown. A report comes from one installation of the app, so the count is of reports, not of people, and the reports are unverified claims.",
        "To make sure requests come from the real app installed from Google Play, the app uses Firebase App Check with Google Play Integrity. Google checks the app and the device and gives the app a short-lived token, which is sent to our database with each request. We do not receive your Google account or any other detail about you from it.",
        "Reports are unverified claims by anonymous people, not facts. If your number was reported and you believe that is wrong, write to us and we will review it and remove reports where appropriate.",
        "If you do not want a number looked up, leave the sender box empty."
@@ -273,7 +276,7 @@
      [
       "ul",
       [
-       "Pairing codes: 15 minutes, or until used.",
+       "Pairing codes: they stop working after 15 minutes. A code is deleted at once when it is used; one that is never used is deleted automatically about a day after it expires.",
        "Links between a guardian and a family member: until either person removes them.",
        "Alerts: about 30 days, or until the guardian deletes them sooner.",
        "A guardian's push token: while that phone uses Sotorko. We delete it when Google tells us it no longer works (for example after the app is uninstalled), and you can ask us to delete it sooner.",
@@ -304,7 +307,8 @@
       "ul",
       [
        "Internet and network state: to reach Google Firebase for the two optional features.",
-       "Notifications: to tell a guardian about an alert. The app asks only when someone becomes a guardian.",
+       "Notifications: to tell a guardian about an alert, and to warn you about a message when automatic checks are on. The app asks only when someone becomes a guardian or turns on automatic checks.",
+       "Notification access (only if you turn on automatic checks): to read new message notifications from the messaging apps listed in section 2, on your phone. You give it in Android's settings and can take it back there, or turn automatic checks off in Sotorko, at any time.",
        "Receive boot completed: so a guardian's phone keeps checking for alerts after a restart.",
        "We do not ask for SMS, call log, contacts, location, camera or microphone."
       ]
