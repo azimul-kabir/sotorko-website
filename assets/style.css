@@ -156,9 +156,11 @@ section { padding: 3.2rem 0; }
 .checks { list-style: none; padding: 0; margin: 1.2rem 0; }
 .checks li { position: relative; padding-left: 2rem; margin-bottom: .6rem; }
 .checks li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
-.hotline-grid { display: grid; gap: .8rem; margin-top: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.hotline-section h3 { margin: 1.4rem 0 .5rem; }
+.hotline-grid { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .hotline { display: block; text-decoration: none; text-align: center; background: var(--green); color: #fff; border-radius: var(--radius); padding: 1rem; font-weight: 700; }
-.hotline span { display: block; font-size: 1.7rem; letter-spacing: .02em; }
+.hotline span { display: block; font-size: 1.25rem; letter-spacing: .02em; overflow-wrap: anywhere; }
+.hotline small { display: block; margin-top: .25rem; font-size: .9rem; font-weight: 400; }
 .hotline:hover { background: var(--green-deep); }
 details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .2rem 1.1rem; margin-bottom: .7rem; }
 summary { cursor: pointer; font-weight: 700; padding: .8rem 0; }
