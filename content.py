@@ -76,7 +76,7 @@ BN = {
     "do": "কী করবেন",
     "scams": [
         ("ভুলে পাঠানো টাকা ফেরত দিন", "আপনার ফোনে \"ক্যাশ ইন\" মেসেজ আসে, তারপর ফোন: \"ভুলে টাকা চলে গেছে, ফেরত দিন।\"", "আগে নিজে অ্যাপ খুলে ব্যালেন্স দেখুন। আসল টাকা এলে অ্যাপেই দেখা যায়। না এলে টাকা পাঠাবেন না।"),
-        ("পিন বা ওটিপি চাওয়া", "কেউ বিকাশ, নগদ বা ব্যাংকের কর্মকর্তা সেজে পিন বা ওটিপি চায়।", "ওরা কখনো এসব চায় না। কাউকে বলবেন না, লাইন কেটে দিন।"),
+        ("পিন বা ওটিপি চাওয়া", "কেউ বিকাশ, নগদ বা ব্যাংকের কর্মকর্তা সেজে পিন বা ওটিপি চায়। ফোনে এইমাত্র আসা কোডটিও চাইতে পারে।", "ওরা কখনো এসব চায় না। কাউকে বলবেন না, লাইন কেটে দিন।"),
         ("পুরস্কার বা সরকারি ভাতা", "\"অভিনন্দন, আপনি জিতেছেন\" বা \"ভাতা পেতে এই লিংকে ক্লিক করুন।\"", "অচেনা লিংকে ক্লিক করবেন না। ভাতা বা পুরস্কারের জন্য ফি বা পিন লাগে না, আগে টাকা পাঠাতেও হয় না।"),
         ("অ্যাকাউন্ট বন্ধ হয়ে যাবে", "\"এখনই কেওয়াইসি আপডেট না করলে অ্যাকাউন্ট ব্লক হবে।\"", "মেসেজের নম্বরে নয়, নিজে অফিসিয়াল হটলাইনে ফোন করে জেনে নিন।"),
         ("ভুয়া জরিমানা বা মামলার নোটিশ", "বিআরটিএ বা পুলিশের নামে মেসেজ: গাড়ির জরিমানা বাকি, টাকা দেওয়ার লিংক, অল্প সময়ের সীমা আর মামলার ভয়, কখনো তাড়াতাড়ি দিলে অর্ধেক ছাড়ের লোভ।", "লিংকে টাকা দেবেন না। নিজে অফিসিয়াল ওয়েবসাইট খুলুন বা অফিসে খোঁজ নিন। সময়সীমা আর ভয় দেখানোই প্রতারকের চাপ।"),
@@ -183,7 +183,7 @@ EN = {
     "do": "What to do",
     "scams": [
         ("\"Sent by mistake, send it back\"", "A fake \"Cash In\" message arrives, then a call: \"I sent the money by mistake, please return it.\"", "Open your own app and check your balance first. Real money shows there. If it is not there, send nothing."),
-        ("Asking for your PIN or OTP", "Someone pretends to be from bKash, Nagad or your bank and asks for your PIN or OTP.", "They never ask for these. Tell no one, and hang up."),
+        ("Asking for your PIN or OTP", "Someone pretends to be from bKash, Nagad or your bank and asks for your PIN or OTP. They may ask for the code just sent to your phone.", "They never ask for these. Tell no one, and hang up."),
         ("Prizes and government allowances", "\"Congratulations, you won!\" or \"Tap this link to get your allowance.\"", "Do not tap unknown links. You never need a fee or PIN to receive a prize or allowance, and you never send money first."),
         ("\"Your account will be blocked\"", "\"Update your KYC now or your account will be blocked.\"", "Call the official hotline yourself, not the number in the message."),
         ("A fake fine or legal notice", "A message in the name of BRTA or the police: a vehicle fine is due, a link to pay, a short deadline and a threat of a case, sometimes a discount for paying fast.", "Do not pay through the link. Open the official website yourself or ask the office. The deadline and the threat are the scammer's pressure."),
