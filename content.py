@@ -57,7 +57,7 @@ BN = {
     "stats_source": "সূত্র: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (জরিপ: ৭,২৭৯ জন ব্যবহারকারী, ৪৫টি জেলা, প্রকাশ আনুমানিক ২০২২)।",
     "how_title": "কীভাবে কাজ করে",
     "steps": [
-        ("মেসেজ শেয়ার বা পেস্ট করুন, বা সতর্ককেই যাচাই করতে দিন", "মেসেজ অ্যাপ থেকে সরাসরি সতর্কে শেয়ার করুন, অথবা লেখাটি পেস্ট করুন। কিংবা একবার নিজে থেকে যাচাই চালু করুন, তাহলে নতুন কোনো মেসেজে বিপদের লক্ষণ থাকলে সতর্ক আপনাকে জানাবে।"),
+        ("মেসেজ শেয়ার বা পেস্ট করুন, বা সতর্ককেই যাচাই করতে দিন", "মেসেজ অ্যাপ থেকে সরাসরি সতর্কে শেয়ার করুন, অথবা লেখাটি পেস্ট করুন। কিংবা একবার নিজে থেকে যাচাই চালু করুন, তাহলে নতুন কোনো মেসেজে বিপদের লক্ষণ থাকলে সতর্ক আপনাকে জানাবে। ইংরেজি অক্ষরে লেখা বাংলাতেও (বাংলিশ) সতর্ক প্রতারণার পরিচিত লক্ষণ খোঁজে।"),
         ("কে পাঠিয়েছে, ট্যাপ করুন", "নাম বা শর্টকোড, নাকি সাধারণ মোবাইল নম্বর, এক ট্যাপেই জানান। কিছু লিখতে হয় না।"),
         ("ফল দেখুন, শুনুন", "ঝুঁকির মাত্রা কারণসহ বাংলায় দেখুন। চাইলে অ্যাপ পড়ে শোনাবে।"),
     ],
@@ -164,7 +164,7 @@ EN = {
     "stats_source": "Source: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (survey of 7,279 users in 45 districts, published around 2022).",
     "how_title": "How it works",
     "steps": [
-        ("Share or paste the message, or let it check for you", "Share it straight from your messages app to Sotorko, or paste the text. Or turn on automatic checks once, and Sotorko warns you when a new message has red flags."),
+        ("Share or paste the message, or let it check for you", "Share it straight from your messages app to Sotorko, or paste the text. Or turn on automatic checks once, and Sotorko warns you when a new message has red flags. Sotorko also checks common scam wording in Bangla typed with English letters (Banglish)."),
         ("Tap who sent it", "A name or short code, or an ordinary mobile number: one tap, nothing to type."),
         ("See the result, hear it", "See how risky it looks, with the reasons, in Bangla. The app can read it aloud."),
     ],
