@@ -23,7 +23,7 @@ SHOT_SIZES = json.loads((ROOT / "assets/shots/manifest.json").read_text())  # wr
 # The phone frames reserve their height in CSS (no inline styles are allowed), so the pictures must all match the ratio written there.
 _phone = {tuple(v) for k, v in SHOT_SIZES.items() if not k.endswith("/gd")}
 assert len(_phone) == 1, f"the phone screenshots differ in size: {_phone}"
-assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 2, "update the aspect-ratio of .shot img and .stage in assets/style.css to the screenshots' size"
+assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 1, "update the aspect-ratio of .shot img in assets/style.css to the screenshots' size"
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
 TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos", "learn": "t-learn"}
@@ -141,12 +141,22 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     scams = "".join(
         f'<article class="scam"><h3>{e(t)}</h3><span class="label">{e(c["look"])}</span><p>{e(l)}</p><span class="label">{e(c["do"])}</span><p class="do">{e(d)}</p></article>'
         for t, l, d in c["scams"])
-    def figure(name, title, text, alt):
+    def screenshot(name, alt):
         width, height = SHOT_SIZES[f"{c['lang']}/{name}"]
-        frame = "paper" if name == "gd" else "shot"  # the GD letter is a sheet of paper, the rest are phone screens
-        return (f'<figure class="gallery-item"><div class="stage"><div class="{frame}"><img src="{base}assets/shots/{c["lang"]}/{name}.webp" width="{width}" height="{height}" '
-                f'alt="{e(alt)}" loading="lazy" decoding="async"></div></div><figcaption><strong>{e(title)}</strong>{e(text)}</figcaption></figure>')
-    shots = "".join(figure(*item) for item in c["screens"])
+        src = f"{base}assets/shots/{c['lang']}/{name}.webp"
+        return src, (f'<img src="{src}" width="{width}" height="{height}" '
+                     f'alt="{e(alt)}" loading="lazy" decoding="async">')
+
+    shots = []
+    for name, title, text, alt in c["screens"]:
+        src, img = screenshot(name, alt)
+        caption = f'<strong>{e(title)}</strong><p>{e(text)}</p>'
+        if name == "gd":
+            gd_preview = (f'<figure class="gd-preview"><div class="paper">{img}</div>'
+                          f'<figcaption>{caption}<a href="{src}">{e(c["gd_view"])}</a></figcaption></figure>')
+        else:
+            shots.append(f'<figure class="gallery-item"><div class="shot">{img}</div><figcaption>{caption}</figcaption></figure>')
+    shots = "".join(shots)
     points = "".join(f"<li>{e(x)}</li>" for x in c["privacy_points"])
     digits = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯") if c["lang"] == "bn" else {}
     hotline_groups = []
@@ -220,7 +230,8 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <section id="screens" class="tint-green" aria-labelledby="shots-h">
 <div class="wrap">
 <h2 id="shots-h">{e(c['screens_title'])}</h2>
-<div class="gallery" tabindex="0" role="group" aria-labelledby="shots-h">{shots}</div>
+<div class="gallery">{shots}</div>
+{gd_preview}
 <p class="small">{e(c['screens_note'])}</p>
 </div>
 </section>
