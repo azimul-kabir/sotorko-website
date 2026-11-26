@@ -14,7 +14,7 @@ import json
 import pathlib
 import re
 
-from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, PLAY, SITE
+from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
 
 ROOT = pathlib.Path(__file__).resolve().parent
 # A short fingerprint on the stylesheet link, so a changed stylesheet is fetched at once despite the day-long cache.
@@ -23,7 +23,7 @@ SHOT_SIZES = json.loads((ROOT / "assets/shots/manifest.json").read_text())  # wr
 # The phone frames reserve their height in CSS (no inline styles are allowed), so the pictures must all match the ratio written there.
 _phone = {tuple(v) for k, v in SHOT_SIZES.items() if not k.endswith("/gd")}
 assert len(_phone) == 1, f"the phone screenshots differ in size: {_phone}"
-assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 2, "update the aspect-ratio of .shot img and .stage in assets/style.css to the screenshots' size"
+assert (ROOT / "assets/style.css").read_text().count("aspect-ratio: %d / %d" % _phone.copy().pop()) >= 1, "update the aspect-ratio of .shot img in assets/style.css to the screenshots' size"
 TODAY = "2026-10-23"
 LOCALE = {"bn": "bn_BD", "en": "en_US"}
 TILE_CLASS = {"message": "t-message", "number": "t-number", "family": "t-family", "hotline": "t-hotline", "sos": "t-sos", "learn": "t-learn"}
@@ -139,25 +139,40 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     also = "".join(f"<li>{e(x)}</li>" for x in c["also"])
     stats = "".join(f'<div class="stat"><b>{e(a)}</b>{e(b)}</div>' for a, b in c["stats"])
     scams = "".join(
-        f'<article class="scam"><h3>{e(t)}</h3><span class="label">{e(c["look"])}</span><p>{e(l)}</p><span class="label">{e(c["do"])}</span><p class="do">{e(d)}</p></article>'
+        f'<article class="scam"><h3>{e(t)}</h3><div class="scam-body">'
+        f'<div class="scam-example"><h4>{e(c["look"])}</h4><p>{e(l)}</p></div>'
+        f'<div class="scam-advice"><h4>{e(c["do"])}</h4><p>{e(d)}</p></div>'
+        '</div></article>'
         for t, l, d in c["scams"])
-    def figure(name, title, text, alt):
+    def screenshot(name, alt):
         width, height = SHOT_SIZES[f"{c['lang']}/{name}"]
-        frame = "paper" if name == "gd" else "shot"  # the GD letter is a sheet of paper, the rest are phone screens
-        return (f'<figure class="gallery-item"><div class="stage"><div class="{frame}"><img src="{base}assets/shots/{c["lang"]}/{name}.webp" width="{width}" height="{height}" '
-                f'alt="{e(alt)}" loading="lazy" decoding="async"></div></div><figcaption><strong>{e(title)}</strong>{e(text)}</figcaption></figure>')
-    shots = "".join(figure(*item) for item in c["screens"])
+        src = f"{base}assets/shots/{c['lang']}/{name}.webp"
+        return src, (f'<img src="{src}" width="{width}" height="{height}" '
+                     f'alt="{e(alt)}" loading="lazy" decoding="async">')
+
+    shots = []
+    for name, title, text, alt in c["screens"]:
+        src, img = screenshot(name, alt)
+        caption = f'<strong>{e(title)}</strong><p>{e(text)}</p>'
+        if name == "gd":
+            gd_preview = (f'<figure class="gd-preview"><div class="paper">{img}</div>'
+                          f'<figcaption>{caption}<a href="{src}">{e(c["gd_view"])}</a></figcaption></figure>')
+        else:
+            shots.append(f'<figure class="gallery-item"><div class="shot">{img}</div><figcaption>{caption}</figcaption></figure>')
+    shots = "".join(shots)
     points = "".join(f"<li>{e(x)}</li>" for x in c["privacy_points"])
     digits = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯") if c["lang"] == "bn" else {}
     hotline_groups = []
     for title, lines in c["hotlines"]:
         links = "".join(
-            f'<a class="hotline" href="tel:{e(number)}">{e(name)}'
-            f'<span>{e(number.translate(digits))}</span><small>{e(purpose)}</small></a>'
+            f'<li><a class="hotline" href="tel:{e(number)}">{e(name)} '
+            f'<span>{e(number.translate(digits))}</span><small> {e(purpose)}</small></a></li>'
             for name, number, purpose in lines
         )
-        hotline_groups.append(f'<h3>{e(title)}</h3><div class="hotline-grid">{links}</div>')
-    hotlines = "".join(hotline_groups)
+        hotline_groups.append(f'<h3>{e(title)}</h3><ul class="hotline-grid" role="list">{links}</ul>')
+    urgent_hotlines, *more_hotlines = hotline_groups
+    hotlines = "".join(more_hotlines)
+    help_steps = "".join(f"<li>{e(step)}</li>" for step in c["help_steps"])
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in c["faq"])
     return (
         head(c, title=c["title"], description=c["description"], path=path, alt_links=alt_links, base=base)
@@ -169,20 +184,24 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <h1>{e(c['hero_title'])}</h1>
 <p class="lead">{e(c['hero_text'])}</p>
 <div class="actions">
-<a class="btn btn-play" href="{PLAY}">{e(c['soon'])}</a>
-<a class="btn btn-ghost" href="#how">{e(c['how_link'])}</a>
+<a class="btn btn-play" href="#get">{e(c['install_action'])}</a>
+<a class="btn btn-ghost" href="#help">{e(c['help_action'])}</a>
 </div>
-<p class="small"><a href="{home}#get">{e(c['notify'])}</a></p>
+<div class="hero-how" id="how">
+<h2>{e(c['how_title'])}</h2>
+<ul>{steps}</ul>
+</div>
 </div>
 {phone(c, base)}
 </div>
 </section>
 
-<section class="tint-green" aria-labelledby="why">
+<section id="help" class="tint-green hotline-section" aria-labelledby="help-h">
 <div class="wrap">
-<h2 id="why">{e(c['stats_title'])}</h2>
-<div class="stats">{stats}</div>
-<p class="small">{e(c['stats_source'])}</p>
+<h2 id="help-h">{e(c['help_title'])}</h2>
+<ol class="help-steps">{help_steps}</ol>
+{urgent_hotlines}
+<p><a href="#hotlines">{e(c['more_hotlines'])}</a></p>
 </div>
 </section>
 
@@ -195,22 +214,6 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
-<section id="how" aria-labelledby="how-h">
-<div class="wrap">
-<h2 id="how-h">{e(c['how_title'])}</h2>
-<ol class="steps">{steps}</ol>
-</div>
-</section>
-
-<section id="screens" class="tint-green" aria-labelledby="shots-h">
-<div class="wrap">
-<h2 id="shots-h">{e(c['screens_title'])}</h2>
-<div class="gallery" tabindex="0" role="group" aria-labelledby="shots-h">{shots}</div>
-<p class="small">{e(c['screens_note'])}</p>
-</div>
-</section>
-
-{release_section(c)}
 <section id="features" aria-labelledby="feat-h">
 <div class="wrap">
 <h2 id="feat-h">{e(c['features_title'])}</h2>
@@ -219,10 +222,27 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
+<section class="tint-green" aria-labelledby="why">
+<div class="wrap">
+<h2 id="why">{e(c['stats_title'])}</h2>
+<div class="stats">{stats}</div>
+<p class="small">{e(c['stats_source'])}</p>
+</div>
+</section>
+
+<section id="screens" class="tint-green" aria-labelledby="shots-h">
+<div class="wrap">
+<h2 id="shots-h">{e(c['screens_title'])}</h2>
+<div class="gallery">{shots}</div>
+{gd_preview}
+<p class="small">{e(c['screens_note'])}</p>
+</div>
+</section>
+
 <section id="scams" class="tint-green" aria-labelledby="scam-h">
 <div class="wrap">
 <h2 id="scam-h">{e(c['scams_title'])}</h2>
-<div class="scam-grid">{scams}</div>
+<div class="scam-list">{scams}</div>
 </div>
 </section>
 
@@ -234,13 +254,14 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
-<section class="tint-green hotline-section" aria-labelledby="hot-h">
+<section id="hotlines" class="tint-green hotline-section" aria-labelledby="hot-h">
 <div class="wrap">
 <h2 id="hot-h">{e(c['hotlines_title'])}</h2>
 {hotlines}
 </div>
 </section>
 
+{release_section(c)}
 <section id="faq" aria-labelledby="faq-h">
 <div class="wrap">
 <h2 id="faq-h">{e(c['faq_title'])}</h2>

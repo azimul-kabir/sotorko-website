@@ -47,7 +47,7 @@ python3 scripts/optimize_shots.py /tmp/raw
 python3 build.py && python3 scripts/check_site.py
 ```
 
-Capture on a tall screen (`adb shell wm size 1080x2400`, then `adb shell wm size reset`); the optimizer's default crop (`--top 72 --bottom 40`) removes that layout's status and gesture bars, and a phone with a 3-button navigation bar needs about `--bottom 135`. All four phone pictures must have the same size, and `.shot img` and `.stage` in `assets/style.css` carry that ratio (720 / 1525 now) because inline styles are not allowed; `build.py` stops with a message when they disagree. The GD picture is a white sheet cropped from the print preview and does not depend on the phone. The same raw captures work for the Play Store listing. The check script fails the build if an image lacks alt text or fixed dimensions.
+Capture on a tall screen (`adb shell wm size 1080x2400`, then `adb shell wm size reset`); the optimizer's default crop (`--top 72 --bottom 40`) removes that layout's status and gesture bars, and a phone with a 3-button navigation bar needs about `--bottom 135`. All four phone pictures must have the same size, and the `.shot img` rule in `assets/style.css` carries that ratio (720 / 1525 now) because inline styles are not allowed; `build.py` stops with a message when they disagree. The GD picture is a white sheet cropped from the print preview and does not depend on the phone. The same raw captures work for the Play Store listing. The check script fails the build if an image lacks alt text or fixed dimensions.
 
 ### What's new
 
