@@ -19,11 +19,18 @@ BN = {
     "skip": "মূল অংশে যান",
     "switch_label": "English",
     "switch_aria": "Read this page in English",
-    "nav": [("how", "কীভাবে কাজ করে"), ("get", "ডাউনলোড"), ("screens", "অ্যাপের ছবি"), ("whats-new", "নতুন কী"), ("features", "কী কী পাবেন"), ("scams", "চেনা প্রতারণা"), ("privacy", "গোপনীয়তা"), ("faq", "প্রশ্নোত্তর")],
+    "nav": [("get", "অ্যাপ নিন"), ("help", "সাহায্য নিন")],
     "hero_title": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_text": "সতর্ক আপনার ফোনেই সন্দেহজনক মেসেজ ও নম্বর যাচাই করে, প্রতারণার লক্ষণ বাংলায় বুঝিয়ে দেয় এবং শুনিয়েও দেয়। বিকাশ, নগদ বা ব্যাংকের নামে আসা ভুয়া মেসেজ চিনতে সাহায্য করে।",
-    "soon": "Google Play-তে নিন",
-    "notify": "আগে ক্লোজড টেস্টে যোগ দিন",
+    "install_action": "ক্লোজড টেস্টে যোগ দিন",
+    "help_action": "মনে হচ্ছে আমি প্রতারিত হয়েছি",
+    "help_title": "প্রতারিত হয়েছেন বলে মনে হলে",
+    "help_steps": [
+        "আর টাকা পাঠাবেন না। কল কেটে দিন, কোনো লিংক খুলবেন না এবং পিন বা ওটিপি কাউকে বলবেন না।",
+        "টাকা চলে গেলে নিচের অফিসিয়াল নম্বর থেকে নিজের সেবাদাতাকে যত দ্রুত সম্ভব ফোন করুন। জরুরি পুলিশ, ফায়ার সার্ভিস বা অ্যাম্বুলেন্সের জন্য ৯৯৯-এ ফোন করুন।",
+        "মেসেজ, ফোন নম্বর ও লেনদেনের স্ক্রিনশট রাখুন। অভিযোগ বা জিডি করতে এগুলো কাজে লাগবে।",
+    ],
+    "more_hotlines": "আরও হটলাইন দেখুন",
     "get_title": "Google Play-তে ক্লোজড টেস্টে যোগ দিন",
     "get_intro": "সতর্ক এখন Google Play-র ক্লোজড টেস্টিংয়ে আছে। সবার জন্য খোলা হওয়ার আগে নিচের দুই ধাপে আপনিও নিতে পারেন।",
     "get_steps": [
@@ -31,7 +38,6 @@ BN = {
         ("Google Play থেকে নামান", "যোগ দেওয়ার পর ফোনে এই লিংক খুলে সতর্ক ইনস্টল করুন।", "Google Play-তে খুলুন", PLAY),
     ],
     "get_note": "গ্রুপে যোগ না দিলে Play-র পাতায় অ্যাপটি দেখা যাবে না। যোগ দেওয়ার পর দেখা যেতে একটু সময় লাগতে পারে।",
-    "how_link": "কীভাবে কাজ করে",
     "phone_tagline": "টাকা পাঠানোর আগে একবার যাচাই করুন",
     "hero_alt": "একটি ভুয়া জরিমানার মেসেজ যাচাইয়ের ফল: লাল \"বিপদ\" বার্তা এবং কারণগুলো: জরিমানা বা মামলার ভয় দেখিয়ে টাকা চাওয়া, সন্দেহজনক লিংক, তাড়াহুড়ো করতে বলা।",
     "screens_title": "অ্যাপটি দেখতে যেমন",
@@ -57,9 +63,9 @@ BN = {
     "stats_source": "সূত্র: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (জরিপ: ৭,২৭৯ জন ব্যবহারকারী, ৪৫টি জেলা, প্রকাশ আনুমানিক ২০২২)।",
     "how_title": "কীভাবে কাজ করে",
     "steps": [
-        ("মেসেজ শেয়ার বা পেস্ট করুন, বা সতর্ককেই যাচাই করতে দিন", "মেসেজ অ্যাপ থেকে সরাসরি সতর্কে শেয়ার করুন, অথবা লেখাটি পেস্ট করুন। কিংবা একবার নিজে থেকে যাচাই চালু করুন, তাহলে নতুন কোনো মেসেজে বিপদের লক্ষণ থাকলে সতর্ক আপনাকে জানাবে। ইংরেজি অক্ষরে লেখা বাংলাতেও (বাংলিশ) সতর্ক প্রতারণার পরিচিত লক্ষণ খোঁজে।"),
-        ("কে পাঠিয়েছে, ট্যাপ করুন", "নাম বা শর্টকোড, নাকি সাধারণ মোবাইল নম্বর, এক ট্যাপেই জানান। কিছু লিখতে হয় না।"),
-        ("ফল দেখুন, শুনুন", "ঝুঁকির মাত্রা কারণসহ বাংলায় দেখুন। চাইলে অ্যাপ পড়ে শোনাবে।"),
+        ("মেসেজ যাচাই করুন", "মেসেজটি সতর্কে শেয়ার বা পেস্ট করুন।"),
+        ("ফোন কল যাচাই করুন", "কেউ আমাকে ফোন করেছে বেছে নিয়ে কয়েকটি প্রশ্নের উত্তর দিন।"),
+        ("লক্ষণগুলো দেখুন", "কেন সন্দেহ হচ্ছে পড়ুন বা শুনুন।"),
     ],
     "features_title": "কী কী পাবেন",
     "features": [
@@ -93,7 +99,7 @@ BN = {
         "দুটি ঐচ্ছিক সুবিধা ইন্টারনেট ব্যবহার করে (পরিবার সুরক্ষা ও নম্বরের অভিযোগ)। নম্বর পাঠানো হয় শুধু একমুখী কোড হিসেবে।",
     ],
     "privacy_link": "পুরো গোপনীয়তা নীতি পড়ুন",
-    "hotlines_title": "প্রয়োজনে যে নম্বরে ফোন করবেন",
+    "hotlines_title": "আরও হটলাইন",
     "hotlines": [
         ("জরুরি সাহায্য", [
             ("জাতীয় জরুরি সেবা", "999", "জরুরি পুলিশ, ফায়ার সার্ভিস বা অ্যাম্বুলেন্সের জন্য।"),
@@ -150,11 +156,18 @@ EN = {
     "skip": "Skip to content",
     "switch_label": "বাংলা",
     "switch_aria": "এই পাতা বাংলায় পড়ুন",
-    "nav": [("how", "How it works"), ("get", "Get the app"), ("screens", "Screenshots"), ("whats-new", "What's new"), ("features", "What you get"), ("scams", "Common scams"), ("privacy", "Privacy"), ("faq", "FAQ")],
+    "nav": [("get", "Get the app"), ("help", "Get help")],
     "hero_title": "Check once before you send money",
     "hero_text": "Sotorko checks suspicious messages and numbers on your own phone, explains the warning signs in plain Bangla and reads them aloud. It helps you spot fake messages sent in the name of bKash, Nagad or your bank.",
-    "soon": "Get it on Google Play",
-    "notify": "Join the closed test first",
+    "install_action": "Join the closed test",
+    "help_action": "I think I’ve been scammed",
+    "help_title": "If you think you’ve been scammed",
+    "help_steps": [
+        "Stop sending money. Hang up, leave links unopened, and keep your PIN and OTP private.",
+        "If money has gone, call your provider as soon as possible using its official number below. Call 999 for urgent police, fire, or ambulance help.",
+        "Keep the messages, phone numbers, and transaction screenshots. You can use them to report what happened or file a police GD.",
+    ],
+    "more_hotlines": "See more hotlines",
     "get_title": "Join the closed test on Google Play",
     "get_intro": "Sotorko is in closed testing on Google Play. Before it opens to everyone, you can get it in two steps.",
     "get_steps": [
@@ -162,7 +175,6 @@ EN = {
         ("Download from Google Play", "Once you have joined, open this link on your phone and install Sotorko.", "Open on Google Play", PLAY),
     ],
     "get_note": "If you have not joined the group, the app will not show on its Play page. It can take a little while to appear after you join.",
-    "how_link": "How it works",
     "phone_tagline": "Check once before you send money",
     "hero_alt": "The result of checking a fake traffic-fine message: a red danger notice and the reasons, a fine or legal threat with a demand to pay, a suspicious link, and pressure to hurry.",
     "screens_title": "See the app",
@@ -188,9 +200,9 @@ EN = {
     "stats_source": "Source: Policy Research Institute, \"State of DFS Consumer Protection in Bangladesh\" (survey of 7,279 users in 45 districts, published around 2022).",
     "how_title": "How it works",
     "steps": [
-        ("Share or paste the message, or let it check for you", "Share it straight from your messages app to Sotorko, or paste the text. Or turn on automatic checks once, and Sotorko warns you when a new message has red flags. Sotorko also checks common scam wording in Bangla typed with English letters (Banglish)."),
-        ("Tap who sent it", "A name or short code, or an ordinary mobile number: one tap, nothing to type."),
-        ("See the result, hear it", "See how risky it looks, with the reasons, in Bangla. The app can read it aloud."),
+        ("Check a message", "Share or paste it into Sotorko."),
+        ("Check a phone call", "Choose Someone called me and answer a few questions."),
+        ("See what raised a flag", "Read or listen to the reasons."),
     ],
     "features_title": "What you get",
     "features": [
@@ -224,7 +236,7 @@ EN = {
         "Two optional features use the internet (Family guardian and number reports). A number is sent only as a one-way code.",
     ],
     "privacy_link": "Read the full privacy policy",
-    "hotlines_title": "Find the right hotline",
+    "hotlines_title": "More hotlines",
     "hotlines": [
         ("Urgent help", [
             ("National emergency", "999", "For urgent police, fire or ambulance help."),

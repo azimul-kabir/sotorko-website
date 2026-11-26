@@ -14,7 +14,7 @@ import json
 import pathlib
 import re
 
-from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, PLAY, SITE
+from content import BN, DEVELOPER, DEVELOPER_SITE, EMAIL, EN, GITHUB, SITE
 
 ROOT = pathlib.Path(__file__).resolve().parent
 # A short fingerprint on the stylesheet link, so a changed stylesheet is fetched at once despite the day-long cache.
@@ -157,7 +157,9 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
             for name, number, purpose in lines
         )
         hotline_groups.append(f'<h3>{e(title)}</h3><div class="hotline-grid">{links}</div>')
-    hotlines = "".join(hotline_groups)
+    urgent_hotlines, *more_hotlines = hotline_groups
+    hotlines = "".join(more_hotlines)
+    help_steps = "".join(f"<li>{e(step)}</li>" for step in c["help_steps"])
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in c["faq"])
     return (
         head(c, title=c["title"], description=c["description"], path=path, alt_links=alt_links, base=base)
@@ -169,20 +171,24 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <h1>{e(c['hero_title'])}</h1>
 <p class="lead">{e(c['hero_text'])}</p>
 <div class="actions">
-<a class="btn btn-play" href="{PLAY}">{e(c['soon'])}</a>
-<a class="btn btn-ghost" href="#how">{e(c['how_link'])}</a>
+<a class="btn btn-play" href="#get">{e(c['install_action'])}</a>
+<a class="btn btn-ghost" href="#help">{e(c['help_action'])}</a>
 </div>
-<p class="small"><a href="{home}#get">{e(c['notify'])}</a></p>
+<div class="hero-how" id="how">
+<h2>{e(c['how_title'])}</h2>
+<ul>{steps}</ul>
+</div>
 </div>
 {phone(c, base)}
 </div>
 </section>
 
-<section class="tint-green" aria-labelledby="why">
+<section id="help" class="tint-green hotline-section" aria-labelledby="help-h">
 <div class="wrap">
-<h2 id="why">{e(c['stats_title'])}</h2>
-<div class="stats">{stats}</div>
-<p class="small">{e(c['stats_source'])}</p>
+<h2 id="help-h">{e(c['help_title'])}</h2>
+<ol class="help-steps">{help_steps}</ol>
+{urgent_hotlines}
+<p><a href="#hotlines">{e(c['more_hotlines'])}</a></p>
 </div>
 </section>
 
@@ -195,10 +201,19 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
-<section id="how" aria-labelledby="how-h">
+<section id="features" aria-labelledby="feat-h">
 <div class="wrap">
-<h2 id="how-h">{e(c['how_title'])}</h2>
-<ol class="steps">{steps}</ol>
+<h2 id="feat-h">{e(c['features_title'])}</h2>
+<div class="cards">{cards}</div>
+<ul class="also">{also}</ul>
+</div>
+</section>
+
+<section class="tint-green" aria-labelledby="why">
+<div class="wrap">
+<h2 id="why">{e(c['stats_title'])}</h2>
+<div class="stats">{stats}</div>
+<p class="small">{e(c['stats_source'])}</p>
 </div>
 </section>
 
@@ -207,15 +222,6 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <h2 id="shots-h">{e(c['screens_title'])}</h2>
 <div class="gallery" tabindex="0" role="group" aria-labelledby="shots-h">{shots}</div>
 <p class="small">{e(c['screens_note'])}</p>
-</div>
-</section>
-
-{release_section(c)}
-<section id="features" aria-labelledby="feat-h">
-<div class="wrap">
-<h2 id="feat-h">{e(c['features_title'])}</h2>
-<div class="cards">{cards}</div>
-<ul class="also">{also}</ul>
 </div>
 </section>
 
@@ -234,13 +240,14 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
-<section class="tint-green hotline-section" aria-labelledby="hot-h">
+<section id="hotlines" class="tint-green hotline-section" aria-labelledby="hot-h">
 <div class="wrap">
 <h2 id="hot-h">{e(c['hotlines_title'])}</h2>
 {hotlines}
 </div>
 </section>
 
+{release_section(c)}
 <section id="faq" aria-labelledby="faq-h">
 <div class="wrap">
 <h2 id="faq-h">{e(c['faq_title'])}</h2>
