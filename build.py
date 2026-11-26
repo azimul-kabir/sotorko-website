@@ -165,11 +165,11 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     hotline_groups = []
     for title, lines in c["hotlines"]:
         links = "".join(
-            f'<a class="hotline" href="tel:{e(number)}">{e(name)}'
-            f'<span>{e(number.translate(digits))}</span><small>{e(purpose)}</small></a>'
+            f'<li><a class="hotline" href="tel:{e(number)}">{e(name)} '
+            f'<span>{e(number.translate(digits))}</span><small> {e(purpose)}</small></a></li>'
             for name, number, purpose in lines
         )
-        hotline_groups.append(f'<h3>{e(title)}</h3><div class="hotline-grid">{links}</div>')
+        hotline_groups.append(f'<h3>{e(title)}</h3><ul class="hotline-grid" role="list">{links}</ul>')
     urgent_hotlines, *more_hotlines = hotline_groups
     hotlines = "".join(more_hotlines)
     help_steps = "".join(f"<li>{e(step)}</li>" for step in c["help_steps"])

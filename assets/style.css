@@ -173,6 +173,55 @@ section { padding: 3.2rem 0; }
   .scam-body { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
 }
 
+.checks { margin-bottom: 0; }
+
+/* sections */
+section { padding: 3.2rem 0; }
+.tint-green { background: var(--t-green); }
+.center { text-align: center; }
+.stats { display: grid; gap: 1rem; margin: 1.5rem 0 1rem; }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.3rem; }
+.stat b { display: block; font-size: 1.5rem; color: var(--link); line-height: 1.4; }
+.steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1rem; counter-reset: step; }
+@media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; }
+.steps li::before { content: counter(step); display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--green); color: #fff; font-weight: 700; margin-bottom: .6rem; }
+.steps h3 { margin-bottom: .3em; }
+@media (min-width: 760px) { .get-steps { grid-template-columns: repeat(2, 1fr); } }
+.cards { display: grid; gap: 1rem; margin-top: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.card { border-radius: var(--radius); padding: 1.4rem; }
+.card img { width: 76px; height: 76px; }
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(6, 1fr); }
+  .card { grid-column: span 2; }
+}
+.card h3 { margin: .5rem 0 .2rem; }
+.card p { margin: 0; }
+.t-message { background: var(--t-green); } .t-number { background: var(--t-blue); } .t-family { background: var(--t-amber); }
+.t-hotline { background: var(--t-purple); } .t-sos { background: var(--t-red); } .t-learn { background: var(--t-teal); }
+.also { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 0; }
+.also li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .3rem 1rem; font-size: .95rem; }
+.scam-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 760px) { .scam-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .scam-grid { grid-template-columns: repeat(3, 1fr); } }
+.scam { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
+.scam .label { display: block; font-size: .85rem; font-weight: 700; color: var(--muted); margin-top: .6rem; }
+.scam .do { border-left: 4px solid var(--green); padding-left: .8rem; margin-top: .3rem; }
+.checks { list-style: none; padding: 0; margin: 1.2rem 0; }
+.checks li { position: relative; padding-left: 2rem; margin-bottom: .6rem; }
+.checks li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
+.hotline-section h3 { margin: 1.4rem 0 .5rem; }
+.hotline-grid { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); list-style: none; margin: 0; padding: 0; }
+.hotline-grid li { display: flex; min-width: 0; }
+.hotline { display: block; width: 100%; text-decoration: none; text-align: center; background: var(--green); color: #fff; border-radius: var(--radius); padding: 1rem; font-weight: 700; }
+.hotline span { display: block; font-size: 1.25rem; letter-spacing: .02em; overflow-wrap: anywhere; }
+.hotline small { display: block; margin-top: .25rem; font-size: .9rem; font-weight: 400; }
+.hotline:hover { background: var(--green-deep); }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .2rem 1.1rem; margin-bottom: .7rem; }
+summary { cursor: pointer; font-weight: 700; padding: .8rem 0; }
+details p { color: var(--muted); }
+
 /* footer */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; font-size: .95rem; color: var(--muted); }
 .foot { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
