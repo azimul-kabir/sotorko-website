@@ -139,7 +139,10 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     also = "".join(f"<li>{e(x)}</li>" for x in c["also"])
     stats = "".join(f'<div class="stat"><b>{e(a)}</b>{e(b)}</div>' for a, b in c["stats"])
     scams = "".join(
-        f'<article class="scam"><h3>{e(t)}</h3><span class="label">{e(c["look"])}</span><p>{e(l)}</p><span class="label">{e(c["do"])}</span><p class="do">{e(d)}</p></article>'
+        f'<article class="scam"><h3>{e(t)}</h3><div class="scam-body">'
+        f'<div class="scam-example"><h4>{e(c["look"])}</h4><p>{e(l)}</p></div>'
+        f'<div class="scam-advice"><h4>{e(c["do"])}</h4><p>{e(d)}</p></div>'
+        '</div></article>'
         for t, l, d in c["scams"])
     def screenshot(name, alt):
         width, height = SHOT_SIZES[f"{c['lang']}/{name}"]
@@ -239,7 +242,7 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 <section id="scams" class="tint-green" aria-labelledby="scam-h">
 <div class="wrap">
 <h2 id="scam-h">{e(c['scams_title'])}</h2>
-<div class="scam-grid">{scams}</div>
+<div class="scam-list">{scams}</div>
 </div>
 </section>
 

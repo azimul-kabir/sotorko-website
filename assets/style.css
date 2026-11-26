@@ -157,24 +157,21 @@ section { padding: 3.2rem 0; }
 .t-hotline { background: var(--t-purple); } .t-sos { background: var(--t-red); } .t-learn { background: var(--t-teal); }
 .also { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 0; }
 .also li { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: .3rem 1rem; font-size: .95rem; }
-.scam-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
-@media (min-width: 760px) { .scam-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1040px) { .scam-grid { grid-template-columns: repeat(3, 1fr); } }
-.scam { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
-.scam .label { display: block; font-size: .85rem; font-weight: 700; color: var(--muted); margin-top: .6rem; }
-.scam .do { border-left: 4px solid var(--green); padding-left: .8rem; margin-top: .3rem; }
-.checks { list-style: none; padding: 0; margin: 1.2rem 0; }
-.checks li { position: relative; padding-left: 2rem; margin-bottom: .6rem; }
-.checks li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
-.hotline-section h3 { margin: 1.4rem 0 .5rem; }
-.hotline-grid { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-.hotline { display: block; text-decoration: none; text-align: center; background: var(--green); color: #fff; border-radius: var(--radius); padding: 1rem; font-weight: 700; }
-.hotline span { display: block; font-size: 1.25rem; letter-spacing: .02em; overflow-wrap: anywhere; }
-.hotline small { display: block; margin-top: .25rem; font-size: .9rem; font-weight: 400; }
-.hotline:hover { background: var(--green-deep); }
-details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .2rem 1.1rem; margin-bottom: .7rem; }
-summary { cursor: pointer; font-weight: 700; padding: .8rem 0; }
-details p { color: var(--muted); }
+.scam-list { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.scam {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+.scam h3 { margin: 0 0 .8rem; }
+.scam-body { display: grid; gap: .6rem; }
+.scam-example, .scam-advice { min-width: 0; padding: .85rem 1rem; border-radius: .85rem; }
+.scam-example { background: var(--t-amber); }
+.scam-advice { background: var(--t-green); border-inline-start: 3px solid var(--link); }
+.scam h4 { font-size: .95rem; margin: 0 0 .25rem; }
+.scam p { margin: 0; }
+@media (min-width: 720px) {
+  .scam-body { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+}
 
 /* footer */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; font-size: .95rem; color: var(--muted); }
