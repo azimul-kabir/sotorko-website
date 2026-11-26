@@ -149,7 +149,15 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
     shots = "".join(figure(*item) for item in c["screens"])
     points = "".join(f"<li>{e(x)}</li>" for x in c["privacy_points"])
     digits = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯") if c["lang"] == "bn" else {}
-    hotlines = "".join(f'<a class="hotline" href="tel:{n}">{e(name)}<span>{n.translate(digits)}</span></a>' for name, n in c["hotlines"])
+    hotline_groups = []
+    for title, lines in c["hotlines"]:
+        links = "".join(
+            f'<a class="hotline" href="tel:{e(number)}">{e(name)}'
+            f'<span>{e(number.translate(digits))}</span><small>{e(purpose)}</small></a>'
+            for name, number, purpose in lines
+        )
+        hotline_groups.append(f'<h3>{e(title)}</h3><div class="hotline-grid">{links}</div>')
+    hotlines = "".join(hotline_groups)
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in c["faq"])
     return (
         head(c, title=c["title"], description=c["description"], path=path, alt_links=alt_links, base=base)
@@ -226,10 +234,10 @@ def render_home(c, *, base, home, switch_href, privacy_href, path, alt_links):
 </div>
 </section>
 
-<section class="tint-green" aria-labelledby="hot-h">
+<section class="tint-green hotline-section" aria-labelledby="hot-h">
 <div class="wrap">
 <h2 id="hot-h">{e(c['hotlines_title'])}</h2>
-<div class="hotline-grid">{hotlines}</div>
+{hotlines}
 </div>
 </section>
 
